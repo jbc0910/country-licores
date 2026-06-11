@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap");
 @import "tailwindcss";
 
 /* =============================================
@@ -28,6 +27,18 @@
   --font-body: "Inter", system-ui, sans-serif;
   --font-accent: "Bebas Neue", Impact, sans-serif;
 }
+
+/* =============================================
+   FONT FACE — garantiza texto visible inmediato
+   font-display: swap evita invisible text en iOS
+   ============================================= */
+
+/* Mientras Google Fonts carga de forma no bloqueante,
+   el texto se muestra con Georgia/system-ui/Impact
+   (las fuentes fallback declaradas en @theme arriba).
+   Una vez las fuentes web están listas, el browser
+   hace un FOUT (Flash of Unstyled Text) invisible
+   porque los pesos/estilos son similares. */
 
 /* =============================================
    RESET & BASE
