@@ -421,43 +421,22 @@ const {
       );
 
       // Mobile menu
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-      menuToggle?.addEventListener("click", () => {
-        mobileMenu?.classList.toggle("open");
-        menuToggle.setAttribute(
-          "aria-expanded",
-          String(mobileMenu?.classList.contains("open")),
-        );
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuToggle?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(mobileMenu?.classList.contains('open')));
       });
 
-      window.addEventListener("resize", () => {
+      window.addEventListener('resize', () => {
         if (window.innerWidth >= 768) {
-          mobileMenu?.classList.remove("open");
-          menuToggle?.setAttribute("aria-expanded", "false");
+          mobileMenu?.classList.remove('open');
+          menuToggle?.setAttribute('aria-expanded', 'false');
         }
       });
 
-      // Scroll reveals via IntersectionObserver (replaces GSAP ScrollTrigger)
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-
-      document
-        .querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale")
-        .forEach((el) => revealObserver.observe(el));
-
       // Globals
-      (window as any).closeMobileMenu = () =>
-        mobileMenu?.classList.remove("open");
+      (window as any).closeMobileMenu = () => mobileMenu?.classList.remove('open');
     </script>
   </body>
 </html>
