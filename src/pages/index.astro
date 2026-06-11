@@ -43,38 +43,36 @@ import heroBarImg from '../assets/hero-bar.jpg';
     <!-- Content -->
     <div class="container" style="position:relative; z-index:2; padding-top:8rem; padding-bottom:6rem;">
       <div style="max-width:680px;">
-        <p id="hero-eyebrow" class="section-eyebrow" style="opacity:0;">
+        <p id="hero-eyebrow" class="section-eyebrow hero-animate hero-animate-1">
           Barranquilla, Colombia — Desde hace más de 20 años
         </p>
 
         <h1
           id="hero-title"
-          class="font-display"
+          class="font-display hero-animate hero-animate-2"
           style="
             font-size:clamp(2.8rem, 7vw, 5.5rem);
             font-weight:900;
             line-height:1.05;
             color:#FFFFFF;
             margin-bottom:1.5rem;
-            opacity:0;
           "
         >
           El Mejor <span class="gold-text-gradient">Bar Vallenato</span><br/>
           en Barranquilla
         </h1>
 
-        <p id="hero-sub" style="
+        <p id="hero-sub" class="hero-animate hero-animate-3" style="
           font-size:clamp(1rem, 2vw, 1.2rem);
           color:#C8BFB0;
           line-height:1.8;
           margin-bottom:2.5rem;
           max-width:520px;
-          opacity:0;
         ">
           Donde la parranda es auténtica, el vallenato se siente y cada noche se convierte en un recuerdo. Más de dos décadas siendo el alma de la rumba barranquillera.
         </p>
 
-        <div id="hero-ctas" style="display:flex; flex-wrap:wrap; gap:1rem; opacity:0;">
+        <div id="hero-ctas" class="hero-animate hero-animate-4" style="display:flex; flex-wrap:wrap; gap:1rem;">
           <a
             href="/contacto"
             title="Reservar mesa en Country Licores vía WhatsApp"
@@ -94,11 +92,10 @@ import heroBarImg from '../assets/hero-bar.jpg';
         </div>
 
         <!-- Stats -->
-        <div id="hero-stats" style="
+        <div id="hero-stats" class="hero-animate hero-animate-5" style="
           display:flex; flex-wrap:wrap; gap:2.5rem;
           margin-top:4rem; padding-top:2.5rem;
           border-top:1px solid rgba(201,168,76,0.15);
-          opacity:0;
         ">
           {[
             { val:'20+', label:'Años de parranda' },
@@ -382,22 +379,8 @@ import heroBarImg from '../assets/hero-bar.jpg';
     </div>
   </section>
 
-  <!-- Scripts -->
+  <!-- Scripts: FAQ only, no GSAP on critical path -->
   <script>
-    import { gsap } from 'gsap';
-
-    const tl = gsap.timeline({ delay: 0.2 });
-    tl.to('#hero-eyebrow', { opacity:1, y:0, duration:0.8, ease:'power3.out' })
-      .to('#hero-title',   { opacity:1, y:0, duration:1,   ease:'power3.out' }, '-=0.4')
-      .to('#hero-sub',     { opacity:1, y:0, duration:0.9, ease:'power3.out' }, '-=0.6')
-      .to('#hero-ctas',    { opacity:1, y:0, duration:0.8, ease:'power3.out' }, '-=0.5')
-      .to('#hero-stats',   { opacity:1, y:0, duration:0.8, ease:'power3.out' }, '-=0.4');
-
-    gsap.to('#scroll-indicator', {
-      scaleY:0.3, transformOrigin:'bottom',
-      duration:1.2, repeat:-1, yoyo:true, ease:'power1.inOut',
-    });
-
     function toggleFAQ(el: HTMLElement) {
       const item = el.closest('.faq-item');
       const isActive = item?.classList.contains('active');

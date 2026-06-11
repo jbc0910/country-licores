@@ -78,6 +78,7 @@ const {
     </script>
   </head>
   <body>
+
     <!-- Navbar -->
     <nav id="navbar" class="navbar" role="navigation" aria-label="Navegación principal">
       <div class="container">
@@ -232,27 +233,22 @@ const {
       </div>
     </footer>
 
-    <!-- GSAP Scripts -->
+    <!-- Lightweight Scripts: no heavy libraries on critical path -->
     <script>
-      import { gsap } from 'gsap';
-      import { ScrollTrigger } from 'gsap/ScrollTrigger';
-      gsap.registerPlugin(ScrollTrigger);
-
       // Navbar scroll
       const navbar = document.getElementById('navbar');
       window.addEventListener('scroll', () => {
         navbar?.classList.toggle('scrolled', window.scrollY > 50);
-      });
+      }, { passive: true });
 
       // Mobile menu
-      const menuToggle  = document.getElementById('menu-toggle');
-      const mobileMenu  = document.getElementById('mobile-menu');
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
       menuToggle?.addEventListener('click', () => {
         mobileMenu?.classList.toggle('open');
         menuToggle.setAttribute('aria-expanded', String(mobileMenu?.classList.contains('open')));
       });
 
-      // Mobile menu resize listener to close it when going desktop
       window.addEventListener('resize', () => {
         if (window.innerWidth >= 768) {
           mobileMenu?.classList.remove('open');
@@ -260,21 +256,18 @@ const {
         }
       });
 
-      // Global reveals
-      const reveals: [string, Record<string,unknown>][] = [
-        ['.reveal',       { opacity:1, y:0 }],
-        ['.reveal-left',  { opacity:1, x:0 }],
-        ['.reveal-right', { opacity:1, x:0 }],
-        ['.reveal-scale', { opacity:1, scale:1 }],
-      ];
-      reveals.forEach(([sel, to]) => {
-        gsap.utils.toArray(sel).forEach((el: any) => {
-          gsap.to(el, {
-            ...to, duration:0.9, ease:'power3.out',
-            scrollTrigger:{ trigger:el, start:'top 88%', once:true }
-          });
+      // Scroll reveals via IntersectionObserver (replaces GSAP ScrollTrigger)
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
         });
-      });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale')
+        .forEach(el => revealObserver.observe(el));
 
       // Globals
       (window as any).closeMobileMenu = () => mobileMenu?.classList.remove('open');

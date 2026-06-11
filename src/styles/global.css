@@ -252,13 +252,40 @@ a   { text-decoration: none; color: inherit; }
 }
 
 /* =============================================
-   REVEAL ANIMATIONS (GSAP)
+   REVEAL ANIMATIONS (IntersectionObserver)
    ============================================= */
 
-.reveal       { opacity: 0; transform: translateY(40px); }
-.reveal-left  { opacity: 0; transform: translateX(-40px); }
-.reveal-right { opacity: 0; transform: translateX(40px); }
-.reveal-scale { opacity: 0; transform: scale(0.9); }
+.reveal       { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-left  { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-right { opacity: 0; transform: translateX(40px);  transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-scale { opacity: 0; transform: scale(0.9);        transition: opacity 0.7s ease, transform 0.7s ease; }
+
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* =============================================
+   HERO CSS ANIMATIONS (no JS needed)
+   ============================================= */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-animate {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.hero-animate-1 { animation-delay: 0.1s; }
+.hero-animate-2 { animation-delay: 0.3s; }
+.hero-animate-3 { animation-delay: 0.5s; }
+.hero-animate-4 { animation-delay: 0.65s; }
+.hero-animate-5 { animation-delay: 0.8s; }
 
 /* =============================================
    NAVBAR
