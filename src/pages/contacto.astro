@@ -27,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
        ======================================== -->
   <section style="background:#0A0305; padding:5rem 0 7rem;">
     <div class="container">
-      <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:5rem; align-items:start;">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-20 items-start">
 
         <!-- Contact Info -->
         <div class="reveal-left">
@@ -37,7 +37,7 @@ import Layout from '../layouts/Layout.astro';
           </h2>
 
           <!-- WhatsApp -->
-          <a href="https://wa.link/ar1xqp" title="WhatsApp Country Licores" target="_blank" rel="noopener"
+          <a href="/contacto" title="WhatsApp Country Licores" target="_blank" rel="noopener"
             style="display:flex; align-items:center; gap:1.25rem; padding:1.5rem; border:1px solid rgba(123,24,40,0.25); margin-bottom:1rem; transition:border-color 0.3s ease, background 0.3s ease;"
             onmouseover="this.style.borderColor='rgba(201,168,76,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
             onmouseout="this.style.borderColor='rgba(123,24,40,0.25)'; this.style.background='transparent'"
@@ -142,7 +142,7 @@ import Layout from '../layouts/Layout.astro';
                 />
               </div>
 
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label for="fecha" style="display:block; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; margin-bottom:0.5rem;">Fecha *</label>
                   <input type="date" id="fecha" name="fecha" required

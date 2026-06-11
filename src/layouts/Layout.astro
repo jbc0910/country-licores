@@ -99,14 +99,14 @@ const {
           </a>
 
           <!-- Desktop Nav -->
-          <div id="desktop-nav" style="display:flex; align-items:center; gap:2.5rem;">
+          <div id="desktop-nav" class="hidden md:flex items-center gap-6 lg:gap-10">
             <a href="/"          class="nav-link" title="Inicio">Inicio</a>
             <a href="/servicios" class="nav-link" title="Nuestros Servicios">Servicios</a>
             <a href="/nosotros"  class="nav-link" title="Quiénes Somos">Nosotros</a>
             <a href="/casos"     class="nav-link" title="Experiencias">Experiencias</a>
             <a href="/contacto"  class="nav-link" title="Contacto">Contacto</a>
             <a
-              href="https://wa.link/ar1xqp"
+              href="/contacto"
               title="Reserva tu mesa en Country Licores vía WhatsApp"
               target="_blank"
               rel="noopener"
@@ -122,7 +122,7 @@ const {
             id="menu-toggle"
             aria-label="Abrir menú de navegación"
             aria-expanded="false"
-            style="display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px;"
+            class="flex md:hidden flex-col gap-[5px] bg-transparent border-none cursor-pointer p-1"
           >
             <span style="display:block; width:24px; height:2px; background:#C9A84C; transition:all 0.3s ease;"></span>
             <span style="display:block; width:18px; height:2px; background:#C9A84C; transition:all 0.3s ease;"></span>
@@ -140,7 +140,7 @@ const {
       <a href="/casos"     class="nav-link" title="Experiencias"  onclick="closeMobileMenu()">Experiencias</a>
       <a href="/contacto"  class="nav-link" title="Contacto"      onclick="closeMobileMenu()">Contacto</a>
       <a
-        href="https://wa.link/ar1xqp"
+        href="/contacto"
         title="Reservar mesa vía WhatsApp"
         target="_blank"
         rel="noopener"
@@ -155,7 +155,7 @@ const {
     <!-- Footer -->
     <footer style="background:#060104; border-top:1px solid rgba(201,168,76,0.12); padding:4rem 0 2rem;">
       <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:3rem; margin-bottom:3rem;">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
 
           <!-- Brand -->
           <div>
@@ -186,7 +186,7 @@ const {
             <div style="margin-top:1.5rem;">
               <h3 style="font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; color:#C9A84C; margin-bottom:1rem;">Reservas</h3>
               <a
-                href="https://wa.link/ar1xqp"
+                href="/contacto"
                 title="Reserva vía WhatsApp"
                 target="_blank"
                 rel="noopener"
@@ -252,21 +252,13 @@ const {
         menuToggle.setAttribute('aria-expanded', String(mobileMenu?.classList.contains('open')));
       });
 
-      // Responsive
-      function handleResize() {
-        const dn = document.getElementById('desktop-nav');
-        const mt = document.getElementById('menu-toggle');
-        if (window.innerWidth < 768) {
-          dn && (dn.style.display = 'none');
-          mt && (mt.style.display = 'flex');
-        } else {
-          dn && (dn.style.display = 'flex');
-          mt && (mt.style.display = 'none');
+      // Mobile menu resize listener to close it when going desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
           mobileMenu?.classList.remove('open');
+          menuToggle?.setAttribute('aria-expanded', 'false');
         }
-      }
-      handleResize();
-      window.addEventListener('resize', handleResize);
+      });
 
       // Global reveals
       const reveals: [string, Record<string,unknown>][] = [
