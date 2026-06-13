@@ -395,25 +395,25 @@ a {
 .navbar-logo {
   object-fit: contain;
   width: auto;
-  height: 40px;
-  max-height: 40px;
+  height: 42px;
+  max-height: 42px;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled .navbar-logo {
-  height: 32px;
-  max-height: 32px;
+  height: 34px;
+  max-height: 34px;
 }
 
 @media (min-width: 768px) {
   .navbar-logo {
-    height: 55px;
-    max-height: 55px;
+    height: 58px;
+    max-height: 58px;
   }
   
   .navbar.scrolled .navbar-logo {
-    height: 45px;
-    max-height: 45px;
+    height: 48px;
+    max-height: 48px;
   }
 }
 
@@ -618,7 +618,7 @@ a {
   width: auto;
   height: auto;
   max-width: 220px;
-  max-height: 80px;
+  max-height: 90px;
   object-fit: contain;
   filter: drop-shadow(0 0 20px rgba(123, 24, 40, 0.35));
   animation: preloader-pulse 1.4s ease-in-out infinite;
