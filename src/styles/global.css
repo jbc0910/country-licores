@@ -392,6 +392,31 @@ a {
   border-bottom: 1px solid rgba(201, 168, 76, 0.12);
 }
 
+.navbar-logo {
+  object-fit: contain;
+  width: auto;
+  height: 40px;
+  max-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .navbar-logo {
+  height: 32px;
+  max-height: 32px;
+}
+
+@media (min-width: 768px) {
+  .navbar-logo {
+    height: 55px;
+    max-height: 55px;
+  }
+  
+  .navbar.scrolled .navbar-logo {
+    height: 45px;
+    max-height: 45px;
+  }
+}
+
 .nav-link {
   font-size: 0.8rem;
   font-weight: 500;
@@ -590,8 +615,10 @@ a {
 }
 
 #preloader-logo {
-  width: 80px;
-  height: 80px;
+  width: auto;
+  height: auto;
+  max-width: 220px;
+  max-height: 80px;
   object-fit: contain;
   filter: drop-shadow(0 0 20px rgba(123, 24, 40, 0.35));
   animation: preloader-pulse 1.4s ease-in-out infinite;
