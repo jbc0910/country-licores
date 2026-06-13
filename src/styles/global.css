@@ -590,18 +590,10 @@ a {
 }
 
 #preloader-logo {
-  width: 72px;
-  height: 72px;
-  background: linear-gradient(135deg, #7b1828, #5a0f1a);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-accent);
-  font-size: 1.8rem;
-  color: #c9a84c;
-  font-weight: 900;
-  box-shadow: 0 0 30px rgba(123, 24, 40, 0.3);
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(123, 24, 40, 0.35));
   animation: preloader-pulse 1.4s ease-in-out infinite;
 }
 

@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import logoImg from "../assets/logo.png";
 import "../styles/global.css";
 
 export interface Props {
@@ -95,7 +97,14 @@ const {
     <!-- Preloader -->
     <div id="preloader" aria-hidden="true">
       <div id="preloader-content">
-        <div id="preloader-logo">CL</div>
+        <Image
+          id="preloader-logo"
+          src={logoImg}
+          alt="Country Licores"
+          title="Preloader Logo Country Licores"
+          width={80}
+          height={80}
+        />
         <div id="preloader-text">COUNTRY LICORES</div>
         <div class="preloader-bar">
           <div class="preloader-progress"></div>
@@ -144,17 +153,14 @@ const {
             title="Country Licores - Inicio"
             style="display:flex; align-items:center; gap:0.75rem;"
           >
-            <div
-              style="
-              width:42px; height:42px;
-              background:linear-gradient(135deg,#7B1828,#5A0F1A);
-              clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-              display:flex; align-items:center; justify-content:center;
-              font-family:var(--font-accent); font-size:1.1rem; color:#C9A84C; font-weight:900;
-            "
-            >
-              CL
-            </div>
+            <Image
+              src={logoImg}
+              alt="Country Licores"
+              title="Logo Country Licores"
+              width={42}
+              height={42}
+              style="object-fit: contain; max-height: 42px; width: auto;"
+            />
             <div>
               <div
                 style="font-family:var(--font-accent); font-size:1.4rem; letter-spacing:0.1em; color:#F8F4EF; line-height:1;"
