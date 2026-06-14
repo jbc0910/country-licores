@@ -73,6 +73,18 @@ a {
   color: inherit;
 }
 
+/* Placeholder visible en todos los navegadores */
+::placeholder {
+  color: #666666;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #666666;
+}
+::-ms-input-placeholder {
+  color: #666666;
+}
+
 /* =============================================
    TYPOGRAPHY
    ============================================= */
