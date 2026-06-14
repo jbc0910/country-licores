@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import heroBarImg from '../assets/hero-bar.jpg';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import heroBarImg from "../assets/hero-bar.jpg";
 ---
 
 <Layout
@@ -10,20 +10,31 @@ import heroBarImg from '../assets/hero-bar.jpg';
   canonical="https://countrylicores.com/nosotros"
 >
   <!-- Page Hero -->
-  <section style="
+  <section
+    class="bg-nocturno-bg"
+    style="
     padding:10rem 0 6rem;
-    background:#0A0305;
     position:relative;
     overflow:hidden;
-  ">
-    <div style="position:absolute; top:0; right:0; width:500px; height:100%; background:linear-gradient(to left, rgba(201,168,76,0.04), transparent); pointer-events:none;"></div>
-    <div style="position:absolute; bottom:0; left:0; width:100%; height:1px; background:linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent);"></div>
+  "
+  >
+    <div
+      style="position:absolute; top:0; right:0; width:500px; height:100%; background:linear-gradient(to left, rgba(123,24,40,0.05), transparent); pointer-events:none;"
+    >
+    </div>
+    <div
+      style="position:absolute; bottom:0; left:0; width:100%; height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);"
+    >
+    </div>
     <div class="container" style="position:relative;">
       <div style="max-width:640px;">
         <p class="section-eyebrow">Nuestra esencia</p>
-        <h1 class="font-display" style="font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; color:#FFFFFF; margin-top:0.5rem; line-height:1.05;">
-          Somos la<br/>
-          <span class="gold-text-gradient">parranda auténtica</span><br/>
+        <h1
+          class="font-display"
+          style="font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; color:#FFFFFF; margin-top:0.5rem; line-height:1.05;"
+        >
+          Somos la<br />
+          <span class="vinotinto-text-gradient">parranda auténtica</span><br />
           de Barranquilla
         </h1>
       </div>
@@ -33,42 +44,72 @@ import heroBarImg from '../assets/hero-bar.jpg';
   <!-- ========================================
        POSICIONAMIENTO
        ======================================== -->
-  <section style="background:#0A0305; padding:6rem 0;">
+  <section
+    class="bg-nocturno-bg"
+    style="padding:6rem 0; border-top:1px solid var(--color-vinotinto-dark);"
+  >
     <div class="container">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center"
+      >
         <div class="reveal-left">
           <p class="section-eyebrow">Nuestra propuesta</p>
-          <h2 class="font-display" style="font-size:clamp(1.8rem, 3.5vw, 2.6rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem; margin-bottom:1.5rem; line-height:1.2;">
-            Para quienes buscan<br/>
-            <span class="gold-text-gradient">parranda de verdad</span>
+          <h2
+            class="font-display"
+            style="font-size:clamp(1.8rem, 3.5vw, 2.6rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem; margin-bottom:1.5rem; line-height:1.2;"
+          >
+            Para quienes buscan<br />
+            <span class="vinotinto-text-gradient">parranda de verdad</span>
           </h2>
-          <p style="color:#C8BFB0; font-size:0.95rem; line-height:1.8; margin-bottom:1rem;">
-            Country Licores existe para quienes aman el vallenato, la música popular y vivir la noche barranquillera sin pretensiones. No somos un club de diseño frío — somos el lugar donde el ambiente lo hacen las personas, la música y las ganas de compartir.
+          <p
+            class="text-neutral-300"
+            style="font-size:0.95rem; line-height:1.8; margin-bottom:1rem;"
+          >
+            Country Licores existe para quienes aman el vallenato, la música
+            popular y vivir la noche barranquillera sin pretensiones. No somos
+            un club de diseño frío — somos el lugar donde el ambiente lo hacen
+            las personas, la música y las ganas de compartir.
           </p>
-          <p style="color:#C8BFB0; font-size:0.95rem; line-height:1.8; margin-bottom:2rem;">
-            Nuestro cliente ideal es alguien entre 22 y 45 años, de Barranquilla o el Caribe colombiano, que valora un buen trago, una buena canción y una buena compañía. Que prefiere autenticidad sobre ostentación.
+          <p
+            class="text-neutral-300"
+            style="font-size:0.95rem; line-height:1.8; margin-bottom:2rem;"
+          >
+            Nuestro cliente ideal es alguien entre 22 y 45 años, de Barranquilla
+            o el Caribe colombiano, que valora un buen trago, una buena canción
+            y una buena compañía. Que prefiere autenticidad sobre ostentación.
           </p>
           <div class="grid grid-cols-2 gap-4 sm:gap-6">
-            {[
-              { label: 'Años en el mercado', value: '20+' },
-              { label: 'Seguidores en IG', value: '+7K' },
-              { label: 'Publicaciones', value: '+3.9K' },
-              { label: 'Ubicación', value: 'Cll 82' },
-            ].map((stat) => (
-              <div style="padding:1.25rem; border:1px solid rgba(201,168,76,0.12); text-align:center;">
-                <div class="font-accent" style="font-size:2rem; color:#C9A84C; line-height:1;">{stat.value}</div>
-                <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#C8BFB0; margin-top:0.25rem;">{stat.label}</div>
-              </div>
-            ))}
+            {
+              [
+                { label: "Años en el mercado", value: "20+" },
+                { label: "Seguidores en IG", value: "+7K" },
+                { label: "Publicaciones", value: "+3.9K" },
+                { label: "Ubicación", value: "Cll 82" },
+              ].map((stat) => (
+                <div style="padding:1.25rem; border:1px solid rgba(58,8,16,0.3); background:var(--color-nocturno-card); text-align:center;">
+                  <div
+                    class="font-accent"
+                    style="font-size:2rem; color:#FFFFFF; line-height:1;"
+                  >
+                    {stat.value}
+                  </div>
+                  <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#999999; margin-top:0.25rem;">
+                    {stat.label}
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
 
         <div class="reveal-right" style="position:relative;">
-          <div style="
+          <div
+            style="
             position:relative;
             aspect-ratio:3/4;
             overflow:hidden;
-          ">
+          "
+          >
             <Image
               src={heroBarImg}
               alt="Country Licores Barranquilla ambiente nocturno"
@@ -76,20 +117,31 @@ import heroBarImg from '../assets/hero-bar.jpg';
               loading="lazy"
               style="width:100%; height:100%; object-fit:cover;"
             />
-            <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(10,3,5,0.7) 0%, transparent 50%);"></div>
+            <div
+              style="position:absolute; inset:0; background:linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 50%);"
+            >
+            </div>
           </div>
           <!-- Floating badge -->
-          <div style="
+          <div
+            style="
             position:absolute;
             bottom:-1.5rem;
             left:-1.5rem;
-            background:#7B1828;
-            color:#F8F4EF;
+            background:var(--color-vinotinto-light);
+            color:#FFFFFF;
             padding:1.25rem;
             min-width:140px;
-          ">
-            <div class="font-accent" style="font-size:1.8rem; line-height:1;">20+</div>
-            <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-top:0.25rem;">años de parranda</div>
+          "
+          >
+            <div class="font-accent" style="font-size:1.8rem; line-height:1;">
+              20+
+            </div>
+            <div
+              style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-top:0.25rem;"
+            >
+              años de parranda
+            </div>
           </div>
         </div>
       </div>
@@ -99,51 +151,67 @@ import heroBarImg from '../assets/hero-bar.jpg';
   <!-- ========================================
        HISTORIA
        ======================================== -->
-  <section style="background:#160709; padding:6rem 0;">
+  <section
+    class="bg-nocturno-bg"
+    style="padding:6rem 0; border-top:1px solid var(--color-vinotinto-dark);"
+  >
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:4rem;">
-        <p class="section-eyebrow" style="justify-content:center;">Cómo empezó todo</p>
-        <h2 class="font-display" style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem;">
-          Una historia nacida<br/>
-          <span class="gold-text-gradient">del vallenato</span>
+        <p class="section-eyebrow" style="justify-content:center;">
+          Cómo empezó todo
+        </p>
+        <h2
+          class="font-display"
+          style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem;"
+        >
+          Una historia nacida<br />
+          <span class="vinotinto-text-gradient">del vallenato</span>
         </h2>
       </div>
 
       <div style="max-width:760px; margin:0 auto;">
         <div style="display:flex; flex-direction:column; gap:0;">
-          {[
-            {
-              year: 'El Origen',
-              title: 'Un espacio para lo que ya existía',
-              text: 'Country Licores nació de un insight simple pero poderoso: en Barranquilla, la gente siempre ha querido un lugar donde el vallenato sea el protagonista, no el fondo. Un espacio donde llegar con amigos, pedir un trago y que la noche fluya sola.',
-            },
-            {
-              year: 'El Crecimiento',
-              title: 'La Calle 82 se convirtió en punto de encuentro',
-              text: 'La sede en la Carrera 43B con 82 se llenó rápido. La palabra se corrió sola. Clientes frecuentes, familias, grupos de amigos — todos encontraron en Country el espacio que buscaban.',
-            },
-            {
-              year: 'La Consolidación',
-              title: 'Dos décadas de parranda ininterrumpida',
-              text: 'Con más de 20 años en el mercado, Country Licores se consolidó como referente de la rumba vallenata en Barranquilla. Una trayectoria construida noche a noche, trago a trago.',
-            },
-            {
-              year: 'Hoy',
-              title: 'Más de 3.900 noches documentadas en redes',
-              text: 'Con más de 3.900 publicaciones en Instagram y una comunidad de más de 7.800 seguidores, Country Licores sigue siendo el referente del entretenimiento nocturno auténtico de Barranquilla.',
-            },
-          ].map((item, i) => (
-            <div class="reveal grid grid-cols-[80px_1fr] sm:grid-cols-[120px_1fr] gap-4 sm:gap-8 py-10 border-b border-[rgba(201,168,76,0.1)] relative">
-              <div style="text-align:right;">
-                <span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:#C9A84C; font-weight:600;">{item.year}</span>
+          {
+            [
+              {
+                year: "El Origen",
+                title: "Un espacio para lo que ya existía",
+                text: "Country Licores nació de una observación simple pero poderoso: en Barranquilla, la gente siempre ha querido un lugar donde el vallenato sea el protagonista, no el fondo. Un espacio donde llegar con amigos, pedir un trago y que la noche fluya sola.",
+              },
+              {
+                year: "El Crecimiento",
+                title: "La Calle 82 se convirtió en punto de encuentro",
+                text: "La sede en la Carrera 43B con 82 se llenó rápido. La palabra se corrió sola. Clientes frecuentes, familias, grupos de amigos — todos encontraron en Country el espacio que buscaban.",
+              },
+              {
+                year: "La Consolidación",
+                title: "Dos décadas de parranda ininterrumpida",
+                text: "Con más de 20 años en el mercado, Country Licores se consolidó como referente de la rumba vallenata en Barranquilla. Una trayectoria construida noche a noche, trago a trago.",
+              },
+              {
+                year: "Hoy",
+                title: "Más de 3.900 noches documentadas en redes",
+                text: "Con más de 3.900 publicaciones en Instagram y una comunidad de más de 7.800 seguidores, Country Licores sigue siendo el referente del entretenimiento nocturno auténtico de Barranquilla.",
+              },
+            ].map((item, i) => (
+              <div class="reveal grid grid-cols-[80px_1fr] sm:grid-cols-[120px_1fr] gap-4 sm:gap-8 py-10 border-b border-[rgba(255,255,255,0.06)] relative">
+                <div style="text-align:right;">
+                  <span style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--color-vinotinto-light); font-weight:600;">
+                    {item.year}
+                  </span>
+                </div>
+                <div style="padding-left:2rem; border-left:1px solid var(--color-vinotinto-light); position:relative;">
+                  <div class="bg-vinotinto-light" style="position:absolute; left:-5px; top:0; width:9px; height:9px; border-radius:50%;" />
+                  <h3 style="font-size:1.05rem; font-weight:700; color:#FFFFFF; margin-bottom:0.75rem;">
+                    {item.title}
+                  </h3>
+                  <p class="text-neutral-300" style="font-size:0.9rem; line-height:1.8;">
+                    {item.text}
+                  </p>
+                </div>
               </div>
-              <div style="padding-left:2rem; border-left:1px solid rgba(201,168,76,0.2); position:relative;">
-                <div style="position:absolute; left:-5px; top:0; width:9px; height:9px; background:#C9A84C; border-radius:50%;"></div>
-                <h3 style="font-size:1.05rem; font-weight:700; color:#F5F0E8; margin-bottom:0.75rem;">{item.title}</h3>
-                <p style="font-size:0.9rem; color:#C8BFB0; line-height:1.8;">{item.text}</p>
-              </div>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </div>
@@ -152,41 +220,60 @@ import heroBarImg from '../assets/hero-bar.jpg';
   <!-- ========================================
        DIFERENCIADOR
        ======================================== -->
-  <section style="background:#0A0305; padding:6rem 0;">
+  <section
+    class="bg-nocturno-bg"
+    style="padding:6rem 0; border-top:1px solid var(--color-vinotinto-dark);"
+  >
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:4rem;">
-        <p class="section-eyebrow" style="justify-content:center;">Lo que nos hace únicos</p>
-        <h2 class="font-display" style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem;">
-          Country no es un bar más.<br/>
-          <span class="gold-text-gradient">Es un sentimiento.</span>
+        <p class="section-eyebrow" style="justify-content:center;">
+          Lo que nos hace únicos
+        </p>
+        <h2
+          class="font-display"
+          style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem;"
+        >
+          Country no es un bar más.<br />
+          <span class="vinotinto-text-gradient">Es un sentimiento.</span>
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {[
-          {
-            title: 'Música que importa',
-            desc: 'No ponemos listas de reproducción genéricas. El vallenato, la popular y la ranchera son nuestra identidad.',
-          },
-          {
-            title: 'Comunidad, no clientela',
-            desc: 'Tenemos clientes que llevan años viniendo. No somos un negocio de paso — somos parte de las historias de familia de Barranquilla.',
-          },
-          {
-            title: '20 años de historia',
-            desc: 'Más de dos décadas de trayectoria en la Calle 82 nos avalan. Country Licores no es moda — es tradición.',
-          },
-          {
-            title: 'Horario que respeta la noche',
-            desc: 'Desde las 4 p.m. hasta las 3:30 a.m. La noche dura lo que tiene que durar.',
-          },
-        ].map((d) => (
-          <div class="reveal-scale" style="padding:2rem; border:1px solid rgba(201,168,76,0.1); transition:border-color 0.3s ease;" onmouseover="this.style.borderColor='rgba(201,168,76,0.35)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.1)'">
-            <div style="width:32px; height:2px; background:#C9A84C; margin-bottom:1.25rem;"></div>
-            <h3 style="font-size:1rem; font-weight:700; color:#F5F0E8; margin-bottom:0.65rem;">{d.title}</h3>
-            <p style="font-size:0.88rem; color:#C8BFB0; line-height:1.75;">{d.desc}</p>
-          </div>
-        ))}
+        {
+          [
+            {
+              title: "Música que importa",
+              desc: "No ponemos listas de reproducción genéricas. El vallenato, la popular y la ranchera son nuestra identidad.",
+            },
+            {
+              title: "Comunidad, no clientela",
+              desc: "Tenemos clientes que llevan años viniendo. No somos un negocio de paso — somos parte de las historias de familia de Barranquilla.",
+            },
+            {
+              title: "20 años de historia",
+              desc: "Más de dos décadas de trayectoria en la Calle 82 nos avalan. Country Licores no es moda — es tradición.",
+            },
+            {
+              title: "Horario que respeta la noche",
+              desc: "Desde las 4 p.m. hasta las 3:30 a.m. La noche dura lo que tiene que durar.",
+            },
+          ].map((d) => (
+            <div
+              class="reveal-scale"
+              style="padding:2rem; border:1px solid rgba(58,8,16,0.3); background:var(--color-nocturno-card); transition:border-color 0.3s ease;"
+              onmouseover="this.style.borderColor='var(--color-vinotinto-light)'"
+              onmouseout="this.style.borderColor='rgba(58,8,16,0.3)'"
+            >
+              <div style="width:32px; height:2px; background:var(--color-vinotinto-light); margin-bottom:1.25rem;" />
+              <h3 style="font-size:1rem; font-weight:700; color:#FFFFFF; margin-bottom:0.65rem;">
+                {d.title}
+              </h3>
+              <p class="text-neutral-300" style="font-size:0.88rem; line-height:1.75;">
+                {d.desc}
+              </p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -194,16 +281,29 @@ import heroBarImg from '../assets/hero-bar.jpg';
   <!-- ========================================
        CTA FINAL
        ======================================== -->
-  <section style="background:#100205; padding:7rem 0; text-align:center; position:relative; overflow:hidden;">
-    <div style="position:absolute; inset:0; background:radial-gradient(ellipse at center, rgba(123,24,40,0.1) 0%, transparent 65%); pointer-events:none;"></div>
+  <section
+    class="bg-nocturno-bg"
+    style="padding:7rem 0; text-align:center; position:relative; overflow:hidden; border-top:1px solid var(--color-vinotinto-dark);"
+  >
+    <div
+      style="position:absolute; inset:0; background:radial-gradient(ellipse at center, rgba(92,14,26,0.1) 0%, transparent 65%); pointer-events:none;"
+    >
+    </div>
     <div class="container" style="position:relative;">
       <div class="reveal">
-        <h2 class="font-display" style="font-size:clamp(1.8rem, 4vw, 3rem); font-weight:900; color:#FFFFFF; margin-bottom:1rem; line-height:1.1;">
-          Ven a vivir la experiencia<br/>
-          <span class="gold-text-gradient">Country Licores</span>
+        <h2
+          class="font-display"
+          style="font-size:clamp(1.8rem, 4vw, 3rem); font-weight:900; color:#FFFFFF; margin-bottom:1rem; line-height:1.1;"
+        >
+          Ven a vivir la experiencia<br />
+          <span class="vinotinto-text-gradient">Country Licores</span>
         </h2>
-        <p style="color:#C8BFB0; max-width:440px; margin:0 auto 2.5rem; font-size:1rem; line-height:1.75;">
-          Reserva tu mesa hoy. La parranda más auténtica de Barranquilla te está esperando.
+        <p
+          class="text-neutral-300"
+          style="max-width:440px; margin:0 auto 2.5rem; font-size:1rem; line-height:1.75;"
+        >
+          Reserva tu mesa hoy. La parranda más auténtica de Barranquilla te está
+          esperando.
         </p>
         <a
           href="/contacto"

@@ -20,7 +20,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
     display:flex;
     align-items:center;
     overflow:hidden;
-    background:#0A0305;
+    background:radial-gradient(circle, rgba(58,8,16,0.45) 0%, rgba(10,10,10,1) 75%);
   "
   >
     <!-- Background -->
@@ -30,14 +30,14 @@ import heroBarImg from "../assets/hero-bar.jpg";
         alt="Ambiente nocturno en Country Licores Barranquilla"
         title="Country Licores — Bar Vallenato Barranquilla"
         loading="eager"
-        style="width:100%; height:100%; object-fit:cover; object-position:center;"
+        style="width:100%; height:100%; object-fit:cover; object-position:center; opacity:0.25;"
       />
       <div
-        style="position:absolute; inset:0; background:linear-gradient(to right, rgba(10,3,5,0.93) 40%, rgba(10,3,5,0.55) 100%);"
+        style="position:absolute; inset:0; background:linear-gradient(to right, rgba(10,10,10,0.93) 40%, rgba(10,10,10,0.55) 100%);"
       >
       </div>
       <div
-        style="position:absolute; inset:0; background:linear-gradient(to top, rgba(10,3,5,0.92) 0%, transparent 55%);"
+        style="position:absolute; inset:0; background:linear-gradient(to top, rgba(10,10,10,0.92) 0%, transparent 55%);"
       >
       </div>
     </div>
@@ -50,7 +50,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
     </div>
     <div
       class="hero-bg-glow"
-      style="background:radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%); bottom:0; right:8%; z-index:1;"
+      style="background:radial-gradient(circle, rgba(123,24,40,0.15) 0%, transparent 70%); bottom:0; right:8%; z-index:1;"
     >
     </div>
 
@@ -84,16 +84,15 @@ import heroBarImg from "../assets/hero-bar.jpg";
             margin-bottom:1.5rem;
           "
         >
-          Donde <span class="gold-text-gradient">El Vallenato</span><br />
+          Donde <span class="vinotinto-text-gradient">El Vallenato</span><br />
           se siente
         </h1>
 
         <p
           id="hero-sub"
-          class="hero-animate hero-animate-3"
+          class="hero-animate hero-animate-3 text-neutral-300"
           style="
           font-size:clamp(1rem, 2vw, 1.2rem);
-          color:#C8BFB0;
           line-height:1.8;
           margin-bottom:2.5rem;
           max-width:520px;
@@ -147,7 +146,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
           style="
           display:flex; flex-wrap:wrap; gap:2.5rem;
           margin-top:4rem; padding-top:2.5rem;
-          border-top:1px solid rgba(201,168,76,0.15);
+          border-top:1px solid rgba(255,255,255,0.1);
         "
         >
           {
@@ -160,11 +159,11 @@ import heroBarImg from "../assets/hero-bar.jpg";
               <div>
                 <div
                   class="font-accent"
-                  style="font-size:2.2rem; color:#C9A84C; line-height:1;"
+                  style="font-size:2.2rem; color:#FFFFFF; line-height:1;"
                 >
                   {s.val}
                 </div>
-                <div style="font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:#C8BFB0; margin-top:0.25rem;">
+                <div style="font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:#999999; margin-top:0.25rem;">
                   {s.label}
                 </div>
               </div>
@@ -179,13 +178,13 @@ import heroBarImg from "../assets/hero-bar.jpg";
       style="position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:0.5rem;"
     >
       <div
-        style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:#C8BFB0;"
+        style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:#999999;"
       >
         Desliza
       </div>
       <div
         id="scroll-indicator"
-        style="width:1px; height:40px; background:linear-gradient(to bottom, #C9A84C, transparent);"
+        style="width:1px; height:40px; background:linear-gradient(to bottom, #7B1828, transparent);"
       >
       </div>
     </div>
@@ -195,7 +194,8 @@ import heroBarImg from "../assets/hero-bar.jpg";
        TRUST SECTION
        ======================================== -->
   <section
-    style="background:#160709; padding:5rem 0; border-top:1px solid rgba(123,24,40,0.2);"
+    class="bg-nocturno-bg"
+    style="padding:5rem 0; border-top:1px solid var(--color-vinotinto-dark);"
   >
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:3.5rem;">
@@ -207,7 +207,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
           style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem;"
         >
           Más de 20 años de parranda<br />
-          <span class="gold-text-gradient">auténtica en Barranquilla</span>
+          <span class="vinotinto-text-gradient">auténtica en Barranquilla</span>
         </h2>
       </div>
 
@@ -246,7 +246,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#C9A84C"
+                  stroke="#9E2235"
                   stroke-width="1.5"
                   set:html={c.icon}
                 />
@@ -254,7 +254,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
               <h3 style="font-size:1.05rem; font-weight:700; color:#FFFFFF; margin-bottom:0.5rem;">
                 {c.title}
               </h3>
-              <p style="font-size:0.88rem; color:#C8BFB0; line-height:1.7;">
+              <p class="text-neutral-300" style="font-size:0.88rem; line-height:1.7;">
                 {c.desc}
               </p>
             </div>
@@ -276,21 +276,18 @@ import heroBarImg from "../assets/hero-bar.jpg";
               name: "María González",
               role: "Cliente frecuente",
               text: "El mejor lugar para pasar una noche de vallenato en Barranquilla. El ambiente es increíble y la atención de primera. Siempre volvemos.",
-              color: "#7B1828",
             },
             {
               init: "C",
               name: "Carolina Herrera",
               role: "Evento de cumpleaños",
               text: "Celebramos el cumpleaños de mi esposo aquí y fue espectacular. El paquete incluía todo y el vallenato sonó toda la noche.",
-              color: "#9C7A28",
             },
             {
               init: "R",
               name: "Roberto Díaz",
               role: "Habitué",
               text: "Country Licores tiene ese sabor a parranda genuina que no se encuentra en cualquier lado. Ya somos de la familia.",
-              color: "#7B1828",
             },
           ].map((t) => (
             <div class="card-dark reveal" style="padding:1.75rem;">
@@ -300,26 +297,24 @@ import heroBarImg from "../assets/hero-bar.jpg";
                     width="14"
                     height="14"
                     viewBox="0 0 24 24"
-                    fill="#C9A84C"
+                    fill="#9E2235"
                   >
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
               </div>
-              <p style="font-size:0.9rem; color:#C8BFB0; line-height:1.75; font-style:italic; margin-bottom:1.25rem;">
+              <p class="text-neutral-300" style="font-size:0.9rem; line-height:1.75; font-style:italic; margin-bottom:1.25rem;">
                 "{t.text}"
               </p>
               <div style="display:flex; align-items:center; gap:0.75rem;">
-                <div
-                  style={`width:36px; height:36px; background:${t.color}; display:flex; align-items:center; justify-content:center; font-weight:700; color:#F8F4EF; font-size:0.85rem;`}
-                >
+                <div style="width:36px; height:36px; background:#7B1828; display:flex; align-items:center; justify-content:center; font-weight:700; color:#FFFFFF; font-size:0.85rem;">
                   {t.init}
                 </div>
                 <div>
                   <div style="font-size:0.88rem; font-weight:600; color:#FFFFFF;">
                     {t.name}
                   </div>
-                  <div style="font-size:0.75rem; color:#C8BFB0;">{t.role}</div>
+                  <div style="font-size:0.75rem; color:#999999;">{t.role}</div>
                 </div>
               </div>
             </div>
@@ -332,7 +327,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
   <!-- ========================================
        SERVICES SECTION
        ======================================== -->
-  <section style="background:#0A0305; padding:6rem 0;">
+  <section class="bg-nocturno-bg" style="padding:6rem 0;">
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:4rem;">
         <p class="section-eyebrow" style="justify-content:center;">
@@ -343,10 +338,10 @@ import heroBarImg from "../assets/hero-bar.jpg";
           style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem; margin-bottom:1rem;"
         >
           Servicios pensados para<br />
-          <span class="gold-text-gradient">tu mejor noche</span>
+          <span class="vinotinto-text-gradient">tu mejor noche</span>
         </h2>
         <p
-          style="color:#C8BFB0; max-width:520px; margin:0 auto; font-size:1rem; line-height:1.7;"
+          style="color:#999999; max-width:520px; margin:0 auto; font-size:1rem; line-height:1.7;"
         >
           Desde una salida casual hasta el evento del año. En Country Licores
           tenemos el plan perfecto para ti.
@@ -364,14 +359,14 @@ import heroBarImg from "../assets/hero-bar.jpg";
           >
           </div>
           <div
-            style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border:1px solid rgba(201,168,76,0.3); margin-bottom:1.5rem;"
+            style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border:1px solid rgba(123,24,40,0.4); margin-bottom:1.5rem;"
           >
             <svg
               width="28"
               height="28"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#C9A84C"
+              stroke="#9E2235"
               stroke-width="1.5"
             >
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
@@ -385,7 +380,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
             Reserva de Mesa
           </h3>
           <p
-            style="color:#C8BFB0; font-size:0.9rem; line-height:1.75; margin-bottom:1.5rem;"
+            style="color:#999999; font-size:0.9rem; line-height:1.75; margin-bottom:1.5rem;"
           >
             Asegura tu espacio antes de llegar. Tu mesa te espera lista para la
             parranda — sin esperas, sin sorpresas.
@@ -400,13 +395,13 @@ import heroBarImg from "../assets/hero-bar.jpg";
                 "Atención prioritaria",
                 "Cualquier día de la semana",
               ].map((i) => (
-                <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:#C8BFB0;">
+                <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:#999999;">
                   <svg
                     width="13"
                     height="13"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#C9A84C"
+                    stroke="#7B1828"
                     stroke-width="2.5"
                   >
                     <polyline points="20 6 9 17 4 12" />
@@ -427,22 +422,22 @@ import heroBarImg from "../assets/hero-bar.jpg";
 
         <!-- Paquete Cumpleaños -->
         <div
-          class="card-dark reveal"
-          style="padding:2.5rem; position:relative; overflow:hidden; border-color:rgba(201,168,76,0.3);"
+          class="card-dark border-vinotinto-light reveal"
+          style="padding:2.5rem; position:relative; overflow:hidden;"
         >
           <div
-            style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, #C9A84C, #9C7A28);"
+            style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, var(--color-vinotinto-dark), var(--color-vinotinto-light));"
           >
           </div>
           <div
-            style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; background:linear-gradient(135deg,#C9A84C,#9C7A28); margin-bottom:1.5rem;"
+            style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; background:linear-gradient(135deg, var(--color-vinotinto-dark), var(--color-vinotinto-light)); margin-bottom:1.5rem;"
           >
             <svg
               width="28"
               height="28"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#0A0305"
+              stroke="#FFFFFF"
               stroke-width="1.5"
             >
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle
@@ -453,7 +448,8 @@ import heroBarImg from "../assets/hero-bar.jpg";
           </div>
           <div style="position:absolute; top:1.5rem; right:1.5rem;">
             <span
-              style="background:rgba(201,168,76,0.15); color:#C9A84C; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.25rem 0.6rem; border:1px solid rgba(201,168,76,0.3);"
+              class="bg-vinotinto text-white"
+              style="font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.25rem 0.6rem; border:1px solid var(--color-vinotinto-light);"
               >Popular</span
             >
           </div>
@@ -464,7 +460,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
             Paquete Cumpleaños
           </h3>
           <p
-            style="color:#C8BFB0; font-size:0.9rem; line-height:1.75; margin-bottom:1.5rem;"
+            style="color:#999999; font-size:0.9rem; line-height:1.75; margin-bottom:1.5rem;"
           >
             Celebra como se merece. Paquetes todo incluido para que el
             cumpleañero viva una noche inolvidable.
@@ -480,13 +476,13 @@ import heroBarImg from "../assets/hero-bar.jpg";
                 "Sorpresa especial",
                 "Atención personalizada",
               ].map((i) => (
-                <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:#C8BFB0;">
+                <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:#999999;">
                   <svg
                     width="13"
                     height="13"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#C9A84C"
+                    stroke="#7B1828"
                     stroke-width="2.5"
                   >
                     <polyline points="20 6 9 17 4 12" />
@@ -538,7 +534,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
             Ambiente Vallenato
           </h3>
           <p
-            style="color:#C8BFB0; font-size:0.9rem; line-height:1.75; margin-bottom:1.5rem;"
+            style="color:#999999; font-size:0.9rem; line-height:1.75; margin-bottom:1.5rem;"
           >
             Vallenato clásico y moderno, popular y ranchera. El sonido que mueve
             el alma costeña, noche tras noche.
@@ -553,13 +549,13 @@ import heroBarImg from "../assets/hero-bar.jpg";
                 "Rancheras",
                 "Crossover costeño",
               ].map((i) => (
-                <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:#C8BFB0;">
+                <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:#999999;">
                   <svg
                     width="13"
                     height="13"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#9E2235"
+                    stroke="#7B1828"
                     stroke-width="2.5"
                   >
                     <polyline points="20 6 9 17 4 12" />
@@ -573,7 +569,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
             href="/nosotros"
             title="Conoce nuestra historia"
             class="btn-secondary"
-            style="font-size:0.8rem; padding:0.6rem 1.4rem; border-color:#7B1828; color:#9E2235;"
+            style="font-size:0.8rem; padding:0.6rem 1.4rem;"
             ><span>Nuestra historia</span></a
           >
         </div>
@@ -585,14 +581,15 @@ import heroBarImg from "../assets/hero-bar.jpg";
        CTA SECTION
        ======================================== -->
   <section
-    style="position:relative; padding:7rem 0; overflow:hidden; background:#100205;"
+    class="bg-nocturno-bg"
+    style="position:relative; padding:7rem 0; overflow:hidden; border-top:1px solid var(--color-vinotinto-dark);"
   >
     <div
-      style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(123,24,40,0.25) 0%, rgba(201,168,76,0.04) 50%, transparent 100%);"
+      style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(123,24,40,0.2) 0%, rgba(255,255,255,0.02) 50%, transparent 100%);"
     >
     </div>
     <div
-      style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; max-width:700px; aspect-ratio:1/1; background:radial-gradient(circle, rgba(123,24,40,0.1) 0%, transparent 70%); border-radius:50%; pointer-events:none;"
+      style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; max-width:700px; aspect-ratio:1/1; background:radial-gradient(circle, rgba(123,24,40,0.08) 0%, transparent 70%); border-radius:50%; pointer-events:none;"
     >
     </div>
     <div class="container" style="position:relative; text-align:center;">
@@ -608,10 +605,10 @@ import heroBarImg from "../assets/hero-bar.jpg";
           style="font-size:clamp(2rem, 5vw, 3.5rem); font-weight:900; color:#FFFFFF; margin-bottom:1rem; line-height:1.1;"
         >
           La mesa está puesta.<br />
-          <span class="gold-text-gradient">¿Vamos a parrandar?</span>
+          <span class="vinotinto-text-gradient">¿Vamos a parrandear?</span>
         </h2>
         <p
-          style="color:#C8BFB0; font-size:1rem; line-height:1.7; max-width:500px; margin:0 auto 2.5rem;"
+          style="color:#999999; font-size:1rem; line-height:1.7; max-width:500px; margin:0 auto 2.5rem;"
         >
           Escríbenos por WhatsApp y aseguramos tu noche, tu cumpleaños o tu
           evento especial en Country Licores.
@@ -654,7 +651,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
             <span>Llamar Ahora</span>
           </a>
         </div>
-        <p style="font-size:0.8rem; color:#C8BFB0; letter-spacing:0.05em;">
+        <p style="font-size:0.8rem; color:#999999; letter-spacing:0.05em;">
           Horario: 4:00 p.m. — 3:30 a.m. &nbsp;|&nbsp; Carrera 43B #82-19,
           Barranquilla
         </p>
@@ -665,7 +662,10 @@ import heroBarImg from "../assets/hero-bar.jpg";
   <!-- ========================================
        FAQ SECTION
        ======================================== -->
-  <section style="background:#160709; padding:6rem 0;">
+  <section
+    class="bg-nocturno-bg"
+    style="padding:6rem 0; border-top:1px solid var(--color-vinotinto-dark);"
+  >
     <div class="container">
       <div
         class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-20 items-start"
@@ -677,10 +677,11 @@ import heroBarImg from "../assets/hero-bar.jpg";
             style="font-size:clamp(1.8rem, 3.5vw, 2.6rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem; margin-bottom:1.25rem; line-height:1.2;"
           >
             Preguntas<br />
-            <span class="gold-text-gradient">frecuentes</span>
+            <span class="vinotinto-text-gradient">frecuentes</span>
           </h2>
           <p
-            style="color:#C8BFB0; font-size:0.95rem; line-height:1.75; margin-bottom:2rem;"
+            class="text-neutral-300"
+            style="font-size:0.95rem; line-height:1.75; margin-bottom:2rem;"
           >
             ¿Tienes dudas sobre reservas, paquetes o nuestra sede? Aquí
             resolvemos las preguntas más comunes.
@@ -694,7 +695,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
           >
         </div>
 
-        <div class="reveal-right">
+        <div class="reveal-right flex flex-col gap-4">
           {
             [
               {

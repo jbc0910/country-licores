@@ -1,43 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import barInteriorImg from '../assets/bar-interior.jpg';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import barInteriorImg from "../assets/bar-interior.jpg";
 
 const testimonials = [
   {
-    name: 'María González',
-    type: 'Salida de Amigos',
-    text: 'El mejor lugar para pasar una noche de vallenato en Barranquilla. El ambiente es increíble, la gente muy amable y la atención de primera. Siempre volvemos.',
+    name: "María González",
+    type: "Salida de Amigos",
+    text: "El mejor lugar para pasar una noche de vallenato en Barranquilla. El ambiente es increíble, la gente muy amable y la atención de primera. Siempre volvemos.",
     stars: 5,
   },
   {
-    name: 'Carolina Herrera',
-    type: 'Cumpleaños',
-    text: 'Celebramos el cumpleaños de mi esposo y fue espectacular. El paquete incluía todo, la atención fue excelente y el vallenato sonó toda la noche.',
+    name: "Carolina Herrera",
+    type: "Cumpleaños",
+    text: "Celebramos el cumpleaños de mi esposo y fue espectacular. El paquete incluía todo, la atención fue excelente y el vallenato sonó toda la noche.",
     stars: 5,
   },
   {
-    name: 'Roberto Díaz',
-    type: 'Cliente Frecuente',
-    text: 'Country Licores tiene ese sabor a parranda genuina que no se encuentra en cualquier lado. Ya somos de la familia.',
+    name: "Roberto Díaz",
+    type: "Cliente Frecuente",
+    text: "Country Licores tiene ese sabor a parranda genuina que no se encuentra en cualquier lado. Ya somos de la familia.",
     stars: 5,
   },
   {
-    name: 'Juliana Martínez',
-    type: 'Despedida de Soltera',
-    text: 'Organizamos la despedida de soltera de mi mejor amiga aquí y fue una noche que no olvidamos. La atención personalizada marcó la diferencia.',
+    name: "Juliana Martínez",
+    type: "Despedida de Soltera",
+    text: "Organizamos la despedida de soltera de mi mejor amiga aquí y fue una noche que no olvidamos. La atención personalizada marcó la diferencia.",
     stars: 5,
   },
   {
-    name: 'Carlos Sánchez',
-    type: 'Salida Empresarial',
-    text: 'Cerramos el año con el equipo de trabajo aquí. Excelente disposición del equipo de Country para atendernos y organizar todo. 100% recomendado.',
+    name: "Carlos Sánchez",
+    type: "Salida Empresarial",
+    text: "Cerramos el año con el equipo de trabajo aquí. Excelente disposición del equipo de Country para atendernos y organizar todo. 100% recomendado.",
     stars: 5,
   },
   {
-    name: 'Paola Rincón',
-    type: 'Cumpleaños 30',
-    text: 'Mi cumpleaños número 30 fue aquí y superó todas las expectativas. La sorpresa, la decoración, el ambiente — perfecto de principio a fin.',
+    name: "Paola Rincón",
+    type: "Cumpleaños 30",
+    text: "Mi cumpleaños número 30 fue aquí y superó todas las expectativas. La sorpresa, la decoración, el ambiente — perfecto de principio a fin.",
     stars: 5,
   },
 ];
@@ -49,12 +49,14 @@ const testimonials = [
   canonical="https://countrylicores.com/casos"
 >
   <!-- Page Hero -->
-  <section style="
+  <section
+    class="bg-nocturno-bg"
+    style="
     padding:10rem 0 6rem;
     position:relative;
     overflow:hidden;
-    background:#0A0305;
-  ">
+  "
+  >
     <div style="position:absolute; inset:0;">
       <Image
         src={barInteriorImg}
@@ -64,17 +66,24 @@ const testimonials = [
         style="width:100%; height:100%; object-fit:cover; opacity:0.15;"
       />
       <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(10,3,5,1) 30%, rgba(10,3,5,0.6) 100%);"></div>
-      <div style="position:absolute; inset:0; background:linear-gradient(to top, #0A0305 0%, transparent 50%);"></div>
+      <div style="position:absolute; inset:0; background:linear-gradient(to top, #0a0a0a 0%, transparent 50%);"></div>
     </div>
     <div class="container" style="position:relative;">
       <div style="max-width:600px;">
         <p class="section-eyebrow">Lo que dicen de nosotros</p>
-        <h1 class="font-display" style="font-size:clamp(2.2rem, 5vw, 4rem); font-weight:900; color:#FFFFFF; margin-top:0.5rem; line-height:1.1; margin-bottom:1rem;">
-          20 años de noches.<br/>
-          <span class="gold-text-gradient">Una sola esencia.</span>
+        <h1
+          class="font-display"
+          style="font-size:clamp(2.2rem, 5vw, 4rem); font-weight:900; color:#FFFFFF; margin-top:0.5rem; line-height:1.1; margin-bottom:1rem;"
+        >
+          20 años de noches.<br />
+          <span class="vinotinto-text-gradient">Una sola esencia.</span>
         </h1>
-        <p style="color:#C8BFB0; font-size:1rem; line-height:1.75; max-width:480px;">
-          Cada reserva, cada cumpleaños, cada despedida — todas tienen algo en común: un recuerdo que se queda. Esto es lo que dicen quienes nos eligieron.
+        <p
+          style="color:#999999; font-size:1rem; line-height:1.75; max-width:480px;"
+        >
+          Cada reserva, cada cumpleaños, cada despedida — todas tienen algo en
+          común: un recuerdo que se queda. Esto es lo que dicen quienes nos
+          eligieron.
         </p>
       </div>
     </div>
@@ -83,20 +92,32 @@ const testimonials = [
   <!-- ========================================
        STATS BAR
        ======================================== -->
-  <section style="background:#160709; padding:3rem 0; border-top:1px solid rgba(123,24,40,0.25); border-bottom:1px solid rgba(123,24,40,0.25);">
+  <section
+    class="bg-nocturno-bg"
+    style="padding:3rem 0; border-top:1px solid var(--color-vinotinto-dark); border-bottom:1px solid var(--color-vinotinto-dark);"
+  >
     <div class="container">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
-        {[
-          { value: '+3.9K', label: 'Noches documentadas' },
-          { value: '+7K', label: 'Seguidores en Instagram' },
-          { value: '20+', label: 'Años de parranda' },
-          { value: '5/5', label: 'Valoración promedio' },
-        ].map((stat) => (
-          <div class="reveal-scale">
-            <div class="font-accent" style="font-size:2rem; color:#C9A84C; line-height:1;">{stat.value}</div>
-            <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#C8BFB0; margin-top:0.4rem;">{stat.label}</div>
-          </div>
-        ))}
+        {
+          [
+            { value: "+3.9K", label: "Noches documentadas" },
+            { value: "+7K", label: "Seguidores en Instagram" },
+            { value: "20+", label: "Años de parranda" },
+            { value: "5/5", label: "Valoración promedio" },
+          ].map((stat) => (
+            <div class="reveal-scale">
+              <div
+                class="font-accent"
+                style="font-size:2rem; color:#FFFFFF; line-height:1;"
+              >
+                {stat.value}
+              </div>
+              <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#999999; margin-top:0.4rem;">
+                {stat.label}
+              </div>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -104,35 +125,60 @@ const testimonials = [
   <!-- ========================================
        TESTIMONIALS GRID
        ======================================== -->
-  <section style="background:#0A0305; padding:6rem 0;">
+  <section class="bg-nocturno-bg" style="padding:6rem 0;">
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:4rem;">
-        <p class="section-eyebrow" style="justify-content:center;">Experiencias reales</p>
-        <h2 class="font-display" style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem;">
-          Lo que dice nuestra<br/>
-          <span class="gold-text-gradient">comunidad</span>
+        <p class="section-eyebrow" style="justify-content:center;">
+          Experiencias reales
+        </p>
+        <h2
+          class="font-display"
+          style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem;"
+        >
+          Lo que dice nuestra<br />
+          <span class="vinotinto-text-gradient">comunidad</span>
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {testimonials.map((t, i) => (
-          <div class="card-dark reveal" style={`padding:2rem; ${i === 1 ? 'border-color:rgba(201,168,76,0.3);' : ''}`}>
-            <div style="display:flex; gap:0.2rem; margin-bottom:1.25rem;">
-              {Array.from({length: t.stars}).map(() => (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              ))}
-            </div>
-            <div style="color:#7B1828; font-size:2rem; line-height:1; font-family:Georgia,serif; margin-bottom:0.5rem;">"</div>
-            <p style="font-size:0.92rem; color:#C8BFB0; line-height:1.8; margin-bottom:1.5rem; font-style:italic;">{t.text}</p>
-            <div style="display:flex; align-items:center; gap:0.75rem;">
-              <div style="width:38px; height:38px; background:linear-gradient(135deg,#7B1828,#5A0F1A); display:flex; align-items:center; justify-content:center; font-weight:700; color:#F8F4EF; font-size:0.9rem;">{t.name[0]}</div>
-              <div>
-                <div style="font-size:0.88rem; font-weight:700; color:#FFFFFF;">{t.name}</div>
-                <div style="font-size:0.75rem; color:#C8BFB0;">{t.type}</div>
+        {
+          testimonials.map((t, i) => (
+            <div
+              class="card-dark reveal"
+              style={`padding:2rem; ${i === 1 ? "border-color:rgba(123,24,40,0.5);" : ""}`}
+            >
+              <div style="display:flex; gap:0.2rem; margin-bottom:1.25rem;">
+                {Array.from({ length: t.stars }).map(() => (
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="#9E2235"
+                  >
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                ))}
+              </div>
+              <div style="color:#7B1828; font-size:2rem; line-height:1; font-family:Georgia,serif; margin-bottom:0.5rem;">
+                "
+              </div>
+              <p style="font-size:0.92rem; color:#999999; line-height:1.8; margin-bottom:1.5rem; font-style:italic;">
+                {t.text}
+              </p>
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <div style="width:38px; height:38px; background:linear-gradient(135deg,#7B1828,#5A0F1A); display:flex; align-items:center; justify-content:center; font-weight:700; color:#F8F4EF; font-size:0.9rem;">
+                  {t.name[0]}
+                </div>
+                <div>
+                  <div style="font-size:0.88rem; font-weight:700; color:#FFFFFF;">
+                    {t.name}
+                  </div>
+                  <div style="font-size:0.75rem; color:#999999;">{t.type}</div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -140,21 +186,29 @@ const testimonials = [
   <!-- ========================================
        ANTES / DESPUÉS
        ======================================== -->
-  <section style="background:#160709; padding:6rem 0;">
+  <section
+    class="bg-nocturno-bg"
+    style="padding:6rem 0; border-top:1px solid var(--color-vinotinto-dark);"
+  >
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:4rem;">
-        <p class="section-eyebrow" style="justify-content:center;">La transformación</p>
-        <h2 class="font-display" style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem;">
-          Sin Country vs.<br/>
-          <span class="gold-text-gradient">Con Country</span>
+        <p class="section-eyebrow" style="justify-content:center;">
+          La transformación
+        </p>
+        <h2
+          class="font-display"
+          style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:700; color:#FFFFFF; margin-top:0.5rem;"
+        >
+          Sin Country vs.<br />
+          <span class="vinotinto-text-gradient">Con Country</span>
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[800px] mx-auto">
         <!-- Antes -->
-        <div class="reveal-left" style="padding:2rem; border:1px solid rgba(123,24,40,0.4); background:rgba(123,24,40,0.06);">
-          <div style="font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:#9E2235; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9E2235" stroke-width="2">
+        <div class="reveal-left" style="padding:2rem; border:1px solid rgba(58,8,16,0.5); background:rgba(58,8,16,0.1);">
+          <div style="font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--color-vinotinto-light); margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-vinotinto-light)" stroke-width="2">
               <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
             </svg>
             Sin reserva
@@ -167,8 +221,8 @@ const testimonials = [
               'Pagas sin saber qué incluye',
               'La noche se arruina antes de empezar',
             ].map((item) => (
-              <li style="display:flex; align-items:flex-start; gap:0.75rem; font-size:0.88rem; color:#C8BFB0; line-height:1.5;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9E2235" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;">
+              <li class="text-neutral-300" style="display:flex; align-items:flex-start; gap:0.75rem; font-size:0.88rem; line-height:1.5;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-vinotinto-light)" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;">
                   <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
                 </svg>
                 {item}
@@ -178,9 +232,9 @@ const testimonials = [
         </div>
 
         <!-- Después -->
-        <div class="reveal-right" style="padding:2rem; border:1px solid rgba(201,168,76,0.3); background:rgba(201,168,76,0.04);">
-          <div style="font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:#C9A84C; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+        <div class="reveal-right" style="padding:2rem; border:1px solid var(--color-vinotinto-light); background:var(--color-nocturno-card);">
+          <div style="font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--color-vinotinto-light); margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-vinotinto-light)" stroke-width="2">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
             Con Country Licores
@@ -193,8 +247,8 @@ const testimonials = [
               'Todo claro desde el primer mensaje',
               'Una noche que se convierte en recuerdo',
             ].map((item) => (
-              <li style="display:flex; align-items:flex-start; gap:0.75rem; font-size:0.88rem; color:#C8BFB0; line-height:1.5;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;">
+              <li class="text-neutral-300" style="display:flex; align-items:flex-start; gap:0.75rem; font-size:0.88rem; line-height:1.5;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-vinotinto-light)" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;">
                   <polyline points="20 6 9 17 4 12"/>
                 </svg>
                 {item}
@@ -209,22 +263,43 @@ const testimonials = [
   <!-- ========================================
        CTA FINAL
        ======================================== -->
-  <section style="background:#100205; padding:7rem 0; text-align:center; position:relative; overflow:hidden;">
-    <div style="position:absolute; inset:0; background:radial-gradient(ellipse at center, rgba(123,24,40,0.1) 0%, transparent 65%); pointer-events:none;"></div>
+  <section
+    class="bg-nocturno-bg"
+    style="padding:7rem 0; text-align:center; position:relative; overflow:hidden; border-top:1px solid var(--color-vinotinto-dark);"
+  >
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse at center, rgba(92,14,26,0.12) 0%, transparent 65%); pointer-events:none;"></div>
     <div class="container" style="position:relative;">
       <div class="reveal">
-        <h2 class="font-display" style="font-size:clamp(1.8rem, 4vw, 3rem); font-weight:900; color:#FFFFFF; margin-bottom:1rem; line-height:1.1;">
-          Tu experiencia<br/>
-          <span class="gold-text-gradient">empieza con una reserva</span>
+        <h2
+          class="font-display"
+          style="font-size:clamp(1.8rem, 4vw, 3rem); font-weight:900; color:#FFFFFF; margin-bottom:1rem; line-height:1.1;"
+        >
+          Tu experiencia<br />
+          <span class="vinotinto-text-gradient">empieza con una reserva</span>
         </h2>
-        <p style="color:#C8BFB0; max-width:440px; margin:0 auto 2.5rem; font-size:1rem; line-height:1.75;">
-          Únete a miles de personas que ya eligieron Country Licores para sus mejores noches.
+        <p
+          style="color:#999999; max-width:440px; margin:0 auto 2.5rem; font-size:1rem; line-height:1.75;"
+        >
+          Únete a miles de personas que ya eligieron Country Licores para sus
+          mejores noches.
         </p>
         <div class="flex flex-wrap gap-4 justify-center">
-          <a href="/contacto" title="Reservar en Country Licores" target="_blank" rel="noopener" class="btn-primary" style="font-size:1rem; padding:1.1rem 2.8rem;">
+          <a
+            href="/contacto"
+            title="Reservar en Country Licores"
+            target="_blank"
+            rel="noopener"
+            class="btn-primary"
+            style="font-size:1rem; padding:1.1rem 2.8rem;"
+          >
             <span>Reservar Ahora</span>
           </a>
-          <a href="/contacto" title="Ver más opciones de contacto" class="btn-secondary" style="font-size:1rem; padding:1.1rem 2.8rem;">
+          <a
+            href="/contacto"
+            title="Ver más opciones de contacto"
+            class="btn-secondary"
+            style="font-size:1rem; padding:1.1rem 2.8rem;"
+          >
             <span>Más Información</span>
           </a>
         </div>

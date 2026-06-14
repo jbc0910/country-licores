@@ -8,15 +8,18 @@ import Layout from '../layouts/Layout.astro';
   canonical="https://countrylicores.com/contacto"
 >
   <!-- Page Hero -->
-  <section style="padding:10rem 0 5rem; background:#0A0305; position:relative; overflow:hidden;">
-    <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 60% 50%, rgba(123,24,40,0.08) 0%, transparent 60%); pointer-events:none;"></div>
+  <section
+    class="bg-nocturno-bg"
+    style="padding:10rem 0 5rem; position:relative; overflow:hidden;"
+  >
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 60% 50%, rgba(92,14,26,0.12) 0%, transparent 60%); pointer-events:none;"></div>
     <div class="container" style="position:relative; text-align:center;">
       <p class="section-eyebrow" style="justify-content:center;">Estamos para ti</p>
       <h1 class="font-display" style="font-size:clamp(2.2rem, 5vw, 4rem); font-weight:900; color:#FFFFFF; margin-top:0.5rem; margin-bottom:1rem; line-height:1.1;">
         Contacto y<br/>
-        <span class="gold-text-gradient">Reservas</span>
+        <span class="vinotinto-text-gradient">Reservas</span>
       </h1>
-      <p style="color:#C8BFB0; max-width:500px; margin:0 auto; font-size:1rem; line-height:1.75;">
+      <p class="text-neutral-300" style="max-width:500px; margin:0 auto; font-size:1rem; line-height:1.75;">
         Un mensaje es todo lo que necesitas. Te respondemos rápido y aseguramos tu espacio.
       </p>
     </div>
@@ -25,7 +28,10 @@ import Layout from '../layouts/Layout.astro';
   <!-- ========================================
        FORMULARIO + INFO
        ======================================== -->
-  <section style="background:#0A0305; padding:5rem 0 7rem;">
+  <section
+    class="bg-nocturno-bg"
+    style="padding:5rem 0 7rem; border-top:1px solid var(--color-vinotinto-dark);"
+  >
     <div class="container">
       <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-20 items-start">
 
@@ -33,13 +39,13 @@ import Layout from '../layouts/Layout.astro';
         <div class="reveal-left">
           <h2 class="font-display" style="font-size:1.6rem; font-weight:700; color:#FFFFFF; margin-bottom:2rem;">
             Información de<br/>
-            <span class="gold-text-gradient">contacto</span>
+            <span class="vinotinto-text-gradient">contacto</span>
           </h2>
 
           <!-- WhatsApp -->
           <a href="/contacto" title="WhatsApp Country Licores" target="_blank" rel="noopener"
             style="display:flex; align-items:center; gap:1.25rem; padding:1.5rem; border:1px solid rgba(123,24,40,0.25); margin-bottom:1rem; transition:border-color 0.3s ease, background 0.3s ease;"
-            onmouseover="this.style.borderColor='rgba(201,168,76,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
+            onmouseover="this.style.borderColor='rgba(158,34,53,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
             onmouseout="this.style.borderColor='rgba(123,24,40,0.25)'; this.style.background='transparent'"
           >
             <div style="width:48px; height:48px; background:rgba(37,211,102,0.1); border:1px solid rgba(37,211,102,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
@@ -50,23 +56,23 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <div style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:#25D366; margin-bottom:0.25rem;">WhatsApp</div>
               <div style="font-size:1.05rem; font-weight:600; color:#FFFFFF;">+57 324 303 7861</div>
-              <div style="font-size:0.8rem; color:#C8BFB0; margin-top:0.1rem;">Respuesta en minutos</div>
+              <div style="font-size:0.8rem; color:#999999; margin-top:0.1rem;">Respuesta en minutos</div>
             </div>
           </a>
 
           <!-- Teléfono -->
           <a href="tel:+573243037861" title="Llamar a Country Licores"
             style="display:flex; align-items:center; gap:1.25rem; padding:1.5rem; border:1px solid rgba(123,24,40,0.25); margin-bottom:1rem; transition:border-color 0.3s ease, background 0.3s ease;"
-            onmouseover="this.style.borderColor='rgba(201,168,76,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
+            onmouseover="this.style.borderColor='rgba(158,34,53,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
             onmouseout="this.style.borderColor='rgba(123,24,40,0.25)'; this.style.background='transparent'"
           >
-            <div style="width:48px; height:48px; background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5">
+            <div style="width:48px; height:48px; background:rgba(123,24,40,0.1); border:1px solid rgba(123,24,40,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9E2235" stroke-width="1.5">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.91 5.91l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
             </div>
             <div>
-              <div style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:#C9A84C; margin-bottom:0.25rem;">Teléfono</div>
+              <div style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:#9E2235; margin-bottom:0.25rem;">Teléfono</div>
               <div style="font-size:1.05rem; font-weight:600; color:#FFFFFF;">324 303 7861</div>
             </div>
           </a>
@@ -74,7 +80,7 @@ import Layout from '../layouts/Layout.astro';
           <!-- Instagram -->
           <a href="https://www.instagram.com/countrylicores" title="Country Licores en Instagram" target="_blank" rel="noopener"
             style="display:flex; align-items:center; gap:1.25rem; padding:1.5rem; border:1px solid rgba(123,24,40,0.25); margin-bottom:2rem; transition:border-color 0.3s ease, background 0.3s ease;"
-            onmouseover="this.style.borderColor='rgba(201,168,76,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
+            onmouseover="this.style.borderColor='rgba(158,34,53,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
             onmouseout="this.style.borderColor='rgba(123,24,40,0.25)'; this.style.background='transparent'"
           >
             <div style="width:48px; height:48px; background:rgba(193,53,132,0.1); border:1px solid rgba(193,53,132,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
@@ -90,80 +96,75 @@ import Layout from '../layouts/Layout.astro';
 
           <!-- Sede Única -->
           <div style="margin-bottom:2rem;">
-            <h3 style="font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; color:#C9A84C; margin-bottom:1.25rem;">Nuestra Sede</h3>
+            <h3 style="font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; color:#9E2235; margin-bottom:1.25rem;">Nuestra Sede</h3>
             <div style="padding:1.25rem; border:1px solid rgba(123,24,40,0.3); background:rgba(123,24,40,0.05);">
               <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9E2235" stroke-width="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
                 </svg>
-                <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#C9A84C;">Sede Principal — Calle 82</span>
+                <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#9E2235;">Sede Principal — Calle 82</span>
               </div>
-              <p style="color:#C8BFB0; font-size:0.88rem; line-height:1.6;">Carrera 43B #82-19, Barranquilla, Atlántico</p>
+              <p style="color:#999999; font-size:0.88rem; line-height:1.6;">Carrera 43B #82-19, Barranquilla, Atlántico</p>
             </div>
           </div>
 
           <!-- Horario -->
-          <div style="padding:1.25rem; border:1px solid rgba(201,168,76,0.15); background:rgba(201,168,76,0.03);">
+          <div style="padding:1.25rem; border:1px solid rgba(123,24,40,0.3); background:rgba(123,24,40,0.06);">
             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9E2235" stroke-width="2">
                 <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
               </svg>
-              <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#C9A84C;">Horario de Atención</span>
+              <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#9E2235;">Horario de Atención</span>
             </div>
             <p style="color:#FFFFFF; font-size:0.95rem; font-weight:600;">Lunes a Domingo</p>
-            <p style="color:#C9A84C; font-size:1.05rem; font-weight:700;">4:00 p.m. — 3:30 a.m.</p>
+            <p style="color:#9E2235; font-size:1.05rem; font-weight:700;">4:00 p.m. — 3:30 a.m.</p>
           </div>
         </div>
 
         <!-- Form -->
         <div class="reveal-right">
-          <div style="padding:2.5rem; border:1px solid rgba(123,24,40,0.25); background:#130608;">
+          <div class="bg-nocturno-card rounded-xl p-8 border border-neutral-800">
             <h2 class="font-display" style="font-size:1.6rem; font-weight:700; color:#FFFFFF; margin-bottom:0.5rem;">
               Solicita tu reserva
             </h2>
-            <p style="color:#C8BFB0; font-size:0.88rem; margin-bottom:2rem;">
+            <p class="text-neutral-300" style="font-size:0.88rem; margin-bottom:2rem;">
               Completa el formulario y te contactamos en minutos.
             </p>
 
             <form id="reserva-form" style="display:flex; flex-direction:column; gap:1.25rem;" onsubmit="handleFormSubmit(event)">
               <div>
-                <label for="nombre" style="display:block; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; margin-bottom:0.5rem;">Nombre completo *</label>
+                <label for="nombre" class="block text-xs uppercase tracking-wider text-vinotinto-light font-bold mb-2">Nombre completo *</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required
-                  style="width:100%; padding:0.875rem 1rem; background:#1A0A0D; border:1px solid rgba(201,168,76,0.2); color:#F8F4EF; font-family:var(--font-body); font-size:0.9rem; outline:none; transition:border-color 0.3s;"
-                  onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"
+                  class="w-full px-4 py-3 bg-[#1A0A0D] border border-vinotinto-dark/50 text-white rounded-lg focus:outline-none focus:border-vinotinto-light focus:ring-2 focus:ring-vinotinto-light/20 transition-all duration-300 placeholder-neutral-500"
                 />
               </div>
 
               <div>
-                <label for="telefono" style="display:block; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; margin-bottom:0.5rem;">WhatsApp o teléfono *</label>
+                <label for="telefono" class="block text-xs uppercase tracking-wider text-vinotinto-light font-bold mb-2">WhatsApp o teléfono *</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" required
-                  style="width:100%; padding:0.875rem 1rem; background:#1A0A0D; border:1px solid rgba(201,168,76,0.2); color:#F8F4EF; font-family:var(--font-body); font-size:0.9rem; outline:none; transition:border-color 0.3s;"
-                  onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"
+                  class="w-full px-4 py-3 bg-[#1A0A0D] border border-vinotinto-dark/50 text-white rounded-lg focus:outline-none focus:border-vinotinto-light focus:ring-2 focus:ring-vinotinto-light/20 transition-all duration-300 placeholder-neutral-500"
                 />
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="fecha" style="display:block; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; margin-bottom:0.5rem;">Fecha *</label>
+                  <label for="fecha" class="block text-xs uppercase tracking-wider text-vinotinto-light font-bold mb-2">Fecha *</label>
                   <input type="date" id="fecha" name="fecha" required
-                    style="width:100%; padding:0.875rem 1rem; background:#1A0A0D; border:1px solid rgba(201,168,76,0.2); color:#F8F4EF; font-family:var(--font-body); font-size:0.9rem; outline:none; color-scheme:dark; transition:border-color 0.3s;"
-                    onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"
+                    class="w-full px-4 py-3 bg-[#1A0A0D] border border-vinotinto-dark/50 text-white rounded-lg focus:outline-none focus:border-vinotinto-light focus:ring-2 focus:ring-vinotinto-light/20 transition-all duration-300 color-scheme-dark"
                   />
                 </div>
                 <div>
-                  <label for="personas" style="display:block; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; margin-bottom:0.5rem;">Personas *</label>
+                  <label for="personas" class="block text-xs uppercase tracking-wider text-vinotinto-light font-bold mb-2">Personas *</label>
                   <input type="number" id="personas" name="personas" min="1" max="100" placeholder="¿Cuántos?" required
-                    style="width:100%; padding:0.875rem 1rem; background:#1A0A0D; border:1px solid rgba(201,168,76,0.2); color:#F8F4EF; font-family:var(--font-body); font-size:0.9rem; outline:none; transition:border-color 0.3s;"
-                    onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"
+                    class="w-full px-4 py-3 bg-[#1A0A0D] border border-vinotinto-dark/50 text-white rounded-lg focus:outline-none focus:border-vinotinto-light focus:ring-2 focus:ring-vinotinto-light/20 transition-all duration-300 placeholder-neutral-500"
                   />
                 </div>
               </div>
 
               <div>
-                <label for="mensaje" style="display:block; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; margin-bottom:0.5rem;">Mensaje adicional</label>
+                <label for="mensaje" class="block text-xs uppercase tracking-wider text-vinotinto-light font-bold mb-2">Mensaje adicional</label>
                 <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Es un cumpleaños? ¿Tienes alguna petición especial?"
-                  style="width:100%; padding:0.875rem 1rem; background:#1A0A0D; border:1px solid rgba(201,168,76,0.2); color:#F8F4EF; font-family:var(--font-body); font-size:0.9rem; outline:none; resize:vertical; min-height:80px; transition:border-color 0.3s;"
-                  onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"
+                  class="w-full px-4 py-3 bg-[#1A0A0D] border border-vinotinto-dark/50 text-white rounded-lg focus:outline-none focus:border-vinotinto-light focus:ring-2 focus:ring-vinotinto-light/20 transition-all duration-300 placeholder-neutral-500 resize-y min-h-[80px]"
                 ></textarea>
               </div>
 

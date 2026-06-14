@@ -2,26 +2,24 @@
 
 /* =============================================
    COUNTRY LICORES — DESIGN SYSTEM
-   Paleta: Vinotinto + Dorado + Blanco
+   Paleta: Negro + Rojo Vinotinto + Blanco
    ============================================= */
 
 @theme {
-  --color-bg: #0a0305;
-  --color-bg-card: #130608;
-  --color-bg-section: #160709;
+  --color-vinotinto-light: #7D1424;
+  --color-vinotinto: #5C0E1A;
+  --color-vinotinto-dark: #3A0810;
+  --color-nocturno-card: #171717;
+  --color-nocturno-bg: #0A0A0A;
+  --color-neutral-350: #bcbcbc;
 
-  --color-vinotinto: #7b1828;
-  --color-vinotinto-light: #9e2235;
-  --color-vinotinto-dark: #5a0f1a;
-  --color-vinotinto-muted: rgba(123, 24, 40, 0.15);
-
-  --color-gold: #c9a84c;
-  --color-gold-light: #e2c97e;
-  --color-gold-dark: #9c7a28;
+  --color-bg: #0a0a0a;
+  --color-bg-card: #171717;
+  --color-bg-section: #0a0a0a;
 
   --color-white: #ffffff;
-  --color-cream: #f8f4ef;
-  --color-cream-muted: #c8bfb0;
+  --color-light: #e8e8e8;
+  --color-muted: #999999;
 
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -59,8 +57,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: #0a0305;
-  color: #f8f4ef;
+  background-color: #0a0a0a;
+  color: #e8e8e8;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -94,64 +92,61 @@ a {
    COLORS
    ============================================= */
 
-.text-gold {
-  color: #c9a84c;
-}
-.text-gold-light {
-  color: #e2c97e;
-}
-.text-cream {
-  color: #f8f4ef;
-}
-.text-cream-muted {
-  color: #c8bfb0;
-}
 .text-vinotinto {
   color: #7b1828;
 }
+.text-vinotinto-light {
+  color: #9e2235;
+}
 .text-white {
   color: #ffffff;
+}
+.text-light {
+  color: #e8e8e8;
+}
+.text-muted {
+  color: #999999;
 }
 
 .bg-vinotinto {
   background-color: #7b1828;
 }
-.bg-gold {
-  background-color: #c9a84c;
+.bg-dark {
+  background-color: #0a0a0a;
 }
 
 /* =============================================
    GRADIENTS
    ============================================= */
 
-.gradient-gold {
-  background: linear-gradient(135deg, #c9a84c 0%, #e2c97e 50%, #9c7a28 100%);
+.gradient-vinotinto {
+  background: linear-gradient(135deg, #7b1828 0%, #9e2235 50%, #5a0f1a 100%);
 }
 
 .gradient-hero {
   background:
     radial-gradient(
       ellipse at 20% 60%,
-      rgba(123, 24, 40, 0.45) 0%,
+      rgba(123, 24, 40, 0.4) 0%,
       transparent 55%
     ),
     radial-gradient(
       ellipse at 75% 30%,
-      rgba(201, 168, 76, 0.12) 0%,
+      rgba(255, 255, 255, 0.03) 0%,
       transparent 50%
     ),
-    #0a0305;
+    #0a0a0a;
 }
 
-.gold-text-gradient {
-  background: linear-gradient(135deg, #c9a84c, #e2c97e, #9c7a28);
+.vinotinto-text-gradient {
+  background: linear-gradient(135deg, #9e2235, #c43050);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.vinotinto-text-gradient {
-  background: linear-gradient(135deg, #9e2235, #7b1828);
+.white-text-gradient {
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -161,102 +156,27 @@ a {
    BUTTONS
    ============================================= */
 
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 2rem;
-  background: linear-gradient(135deg, #c9a84c, #9c7a28);
-  color: #0a0305;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  clip-path: polygon(
-    0 0,
-    calc(100% - 12px) 0,
-    100% 12px,
-    100% 100%,
-    12px 100%,
-    0 calc(100% - 12px)
-  );
-}
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-vinotinto rounded-lg transition-all duration-300 shadow-lg shadow-vinotinto/20 hover:bg-vinotinto-light hover:shadow-vinotinto-light/30 focus:outline-none focus:ring-2 focus:ring-vinotinto-light/50;
+  }
 
-.btn-primary::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #e2c97e, #c9a84c);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-transparent border border-vinotinto rounded-lg transition-all duration-300 hover:bg-vinotinto/10 focus:outline-none focus:ring-2 focus:ring-vinotinto/30;
+  }
 
-.btn-primary:hover::before {
-  opacity: 1;
-}
-.btn-primary span {
-  position: relative;
-  z-index: 1;
-}
-.btn-primary svg {
-  position: relative;
-  z-index: 1;
-}
+  .card-dark {
+    @apply bg-nocturno-card rounded-xl p-6 border transition-all duration-300;
+    border-color: rgba(58, 8, 16, 0.3); /* border-vinotinto-dark/30 */
+  }
+  
+  .card-dark:hover {
+    border-color: rgba(125, 20, 36, 0.4); /* Efecto hover sutil en vinotinto-light */
+  }
 
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 2rem;
-  background: transparent;
-  color: #c9a84c;
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: 1px solid #c9a84c;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background: rgba(201, 168, 76, 0.08);
-  border-color: #e2c97e;
-  color: #e2c97e;
-}
-
-.btn-vinotinto {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 2rem;
-  background: linear-gradient(135deg, #7b1828, #5a0f1a);
-  color: #f8f4ef;
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  clip-path: polygon(
-    0 0,
-    calc(100% - 12px) 0,
-    100% 12px,
-    100% 100%,
-    12px 100%,
-    0 calc(100% - 12px)
-  );
-}
-
-.btn-vinotinto:hover {
-  filter: brightness(1.15);
+  .faq-item {
+    @apply bg-nocturno-card rounded-lg overflow-hidden border border-neutral-800 transition-colors duration-200;
+  }
 }
 
 /* =============================================
@@ -285,7 +205,7 @@ a {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #c9a84c;
+  color: #9e2235;
   margin-bottom: 1rem;
 }
 
@@ -294,17 +214,17 @@ a {
   display: block;
   width: 2rem;
   height: 1px;
-  background: #c9a84c;
+  background: #7b1828;
 }
 
 /* =============================================
    DECORATIVOS
    ============================================= */
 
-.gold-line {
+.accent-line {
   width: 3rem;
   height: 2px;
-  background: linear-gradient(90deg, #c9a84c, transparent);
+  background: linear-gradient(90deg, #7b1828, transparent);
 }
 
 .divider {
@@ -313,7 +233,7 @@ a {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(201, 168, 76, 0.25),
+    rgba(255, 255, 255, 0.1),
     transparent
   );
 }
@@ -322,22 +242,11 @@ a {
    CARDS
    ============================================= */
 
-.card-dark {
-  background: #130608;
-  border: 1px solid rgba(201, 168, 76, 0.1);
-  transition:
-    border-color 0.3s ease,
-    transform 0.3s ease;
-}
 
-.card-dark:hover {
-  border-color: rgba(201, 168, 76, 0.35);
-  transform: translateY(-4px);
-}
 
 .card-vinotinto {
-  background: rgba(123, 24, 40, 0.12);
-  border: 1px solid rgba(123, 24, 40, 0.35);
+  background: rgba(123, 24, 40, 0.1);
+  border: 1px solid rgba(123, 24, 40, 0.3);
   transition:
     border-color 0.3s ease,
     background 0.3s ease;
@@ -345,7 +254,7 @@ a {
 
 .card-vinotinto:hover {
   border-color: rgba(158, 34, 53, 0.6);
-  background: rgba(123, 24, 40, 0.2);
+  background: rgba(123, 24, 40, 0.18);
 }
 
 /* =============================================
@@ -386,10 +295,10 @@ a {
 }
 
 .navbar.scrolled {
-  background: rgba(10, 3, 5, 0.96);
+  background: rgba(10, 10, 10, 0.96);
   backdrop-filter: blur(20px);
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  border-bottom: 1px solid rgba(123, 24, 40, 0.2);
 }
 
 .navbar-logo {
@@ -422,7 +331,7 @@ a {
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #c8bfb0;
+  color: #999999;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -434,12 +343,12 @@ a {
   left: 0;
   width: 0;
   height: 1px;
-  background: #c9a84c;
+  background: #7b1828;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #c9a84c;
+  color: #ffffff;
 }
 .nav-link:hover::after {
   width: 100%;
@@ -455,7 +364,7 @@ a {
   right: -100%;
   width: 100%;
   height: 100vh;
-  background: #0a0305;
+  background: #0a0a0a;
   z-index: 99;
   display: flex;
   flex-direction: column;
@@ -490,31 +399,27 @@ a {
    FAQ
    ============================================= */
 
-.faq-item {
-  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
-}
-
 .faq-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
   cursor: pointer;
   font-weight: 600;
   font-size: 1.05rem;
-  color: #f8f4ef;
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
 .faq-question:hover {
-  color: #c9a84c;
+  color: #ffffff;
 }
 
 .faq-icon {
   width: 24px;
   height: 24px;
-  border: 1px solid #c9a84c;
-  color: #c9a84c;
+  border: 1px solid rgba(125, 20, 36, 0.6);
+  color: #7D1424;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -527,8 +432,8 @@ a {
 
 .faq-item.active .faq-icon {
   transform: rotate(45deg);
-  background: #c9a84c;
-  color: #0a0305;
+  background: #5C0E1A;
+  color: #ffffff;
 }
 
 .faq-answer {
@@ -537,8 +442,9 @@ a {
   transition:
     max-height 0.4s ease,
     padding 0.3s ease;
-  color: #c8bfb0;
+  color: var(--color-neutral-350);
   line-height: 1.8;
+  padding: 0 1.5rem;
 }
 
 .faq-item.active .faq-answer {
@@ -564,7 +470,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 3, 5, 0.8) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.8) 0%, transparent 60%);
 }
 
 /* =============================================
@@ -575,7 +481,7 @@ a {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0305;
+  background: #0a0a0a;
 }
 ::-webkit-scrollbar-thumb {
   background: #7b1828;
@@ -589,7 +495,7 @@ a {
 #preloader {
   position: fixed;
   inset: 0;
-  background: #0a0305;
+  background: #0a0a0a;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -628,14 +534,14 @@ a {
   font-family: var(--font-accent);
   font-size: 1.1rem;
   letter-spacing: 0.35em;
-  color: #c9a84c;
+  color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .preloader-bar {
   width: 140px;
   height: 2px;
-  background: rgba(201, 168, 76, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 2px;
   overflow: hidden;
   position: relative;
@@ -644,7 +550,7 @@ a {
 .preloader-progress {
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, #7b1828, #c9a84c, #7b1828);
+  background: linear-gradient(90deg, #5a0f1a, #9e2235, #5a0f1a);
   position: absolute;
   left: -100%;
   animation: preloader-loading 1.6s infinite linear;
