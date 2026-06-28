@@ -17,6 +17,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
     style="
     position:relative;
     min-height:100vh;
+    min-height:100dvh;
     display:flex;
     align-items:center;
     overflow:hidden;
@@ -30,6 +31,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
         alt="Ambiente nocturno en Country Licores Barranquilla"
         title="Country Licores — Bar Vallenato Barranquilla"
         loading="eager"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
         style="width:100%; height:100%; object-fit:cover; object-position:center; opacity:0.55;"
       />
       <div
@@ -62,8 +64,8 @@ import heroBarImg from "../assets/hero-bar.jpg";
 
     <!-- Content -->
     <div
-      class="container"
-      style="position:relative; z-index:2; padding-top:8rem; padding-bottom:6rem;"
+      class="container pt-24 pb-16 md:pt-32 md:pb-24"
+      style="position:relative; z-index:2;"
     >
       <div style="max-width:680px;">
         <p
@@ -113,23 +115,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
             title="Reservar mesa en Country Licores vía WhatsApp"
             target="_blank"
             rel="noopener"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:0.6rem;
-              padding:0.875rem 1.75rem;
-              font-size:0.9rem;
-              font-weight:700;
-              color:#fff;
-              background:#7B1828;
-              border:1px solid #9E2235;
-              letter-spacing:0.08em;
-              text-transform:uppercase;
-              transition:background 0.3s ease, box-shadow 0.3s ease;
-              box-shadow:0 4px 24px rgba(123,24,40,0.35);
-            "
-            onmouseover="this.style.background='#9E2235'; this.style.boxShadow='0 4px 32px rgba(158,34,53,0.5)';"
-            onmouseout="this.style.background='#7B1828'; this.style.boxShadow='0 4px 24px rgba(123,24,40,0.35)';"
+            class="inline-flex items-center gap-[0.6rem] px-7 py-3.5 text-[0.9rem] font-bold text-white bg-[#7B1828] border border-[#9E2235] tracking-[0.08em] uppercase transition-all duration-300 shadow-[0_4px_24px_rgba(123,24,40,0.35)] hover:bg-[#9E2235] hover:shadow-[0_4px_32px_rgba(158,34,53,0.5)]"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;">
               <path
@@ -141,22 +127,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
           <a
             href="/servicios"
             title="Ver servicios de Country Licores"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:0.6rem;
-              padding:0.875rem 1.75rem;
-              font-size:0.9rem;
-              font-weight:700;
-              color:#fff;
-              background:transparent;
-              border:1px solid rgba(123,24,40,0.7);
-              letter-spacing:0.08em;
-              text-transform:uppercase;
-              transition:background 0.3s ease, border-color 0.3s ease;
-            "
-            onmouseover="this.style.background='rgba(123,24,40,0.15)'; this.style.borderColor='rgba(158,34,53,0.9)';"
-            onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(123,24,40,0.7)';"
+            class="inline-flex items-center gap-[0.6rem] px-7 py-3.5 text-[0.9rem] font-bold text-white bg-transparent border border-[rgba(123,24,40,0.7)] tracking-[0.08em] uppercase transition-all duration-300 hover:bg-[rgba(123,24,40,0.15)] hover:border-[rgba(158,34,53,0.9)]"
           >
             <span>Ver Servicios</span>
             <svg
@@ -226,8 +197,8 @@ import heroBarImg from "../assets/hero-bar.jpg";
        TRUST SECTION
        ======================================== -->
   <section
-    class="bg-nocturno-bg"
-    style="padding:5rem 0; border-top:1px solid var(--color-vinotinto-dark);"
+    class="bg-nocturno-bg py-12 md:py-20"
+    style="border-top:1px solid var(--color-vinotinto-dark);"
   >
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:3.5rem;">
@@ -359,7 +330,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
   <!-- ========================================
        SERVICES SECTION
        ======================================== -->
-  <section class="bg-nocturno-bg" style="padding:6rem 0;">
+  <section class="bg-nocturno-bg py-12 md:py-24">
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:4rem;">
         <p class="section-eyebrow" style="justify-content:center;">
@@ -613,8 +584,8 @@ import heroBarImg from "../assets/hero-bar.jpg";
        CTA SECTION
        ======================================== -->
   <section
-    class="bg-nocturno-bg"
-    style="position:relative; padding:7rem 0; overflow:hidden; border-top:1px solid var(--color-vinotinto-dark);"
+    class="bg-nocturno-bg py-16 md:py-28"
+    style="position:relative; overflow:hidden; border-top:1px solid var(--color-vinotinto-dark);"
   >
     <div
       style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(123,24,40,0.2) 0%, rgba(255,255,255,0.02) 50%, transparent 100%);"
@@ -653,23 +624,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
             title="Contactar Country Licores por WhatsApp"
             target="_blank"
             rel="noopener"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:0.6rem;
-              padding:1rem 2.5rem;
-              font-size:0.95rem;
-              font-weight:700;
-              color:#fff;
-              background:#7B1828;
-              border:1px solid #9E2235;
-              letter-spacing:0.08em;
-              text-transform:uppercase;
-              transition:background 0.3s ease, box-shadow 0.3s ease;
-              box-shadow:0 4px 24px rgba(123,24,40,0.35);
-            "
-            onmouseover="this.style.background='#9E2235'; this.style.boxShadow='0 4px 32px rgba(158,34,53,0.5)';"
-            onmouseout="this.style.background='#7B1828'; this.style.boxShadow='0 4px 24px rgba(123,24,40,0.35)';"
+            class="inline-flex items-center gap-[0.6rem] px-10 py-4 text-[0.95rem] font-bold text-white bg-[#7B1828] border border-[#9E2235] tracking-[0.08em] uppercase transition-all duration-300 shadow-[0_4px_24px_rgba(123,24,40,0.35)] hover:bg-[#9E2235] hover:shadow-[0_4px_32px_rgba(158,34,53,0.5)]"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;">
               <path
@@ -681,22 +636,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
           <a
             href="tel:+573243037861"
             title="Llamar a Country Licores"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:0.6rem;
-              padding:1rem 2.5rem;
-              font-size:0.95rem;
-              font-weight:700;
-              color:#fff;
-              background:transparent;
-              border:1px solid rgba(123,24,40,0.7);
-              letter-spacing:0.08em;
-              text-transform:uppercase;
-              transition:background 0.3s ease, border-color 0.3s ease;
-            "
-            onmouseover="this.style.background='rgba(123,24,40,0.15)'; this.style.borderColor='rgba(158,34,53,0.9)';"
-            onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(123,24,40,0.7)';"
+            class="inline-flex items-center gap-[0.6rem] px-10 py-4 text-[0.95rem] font-bold text-white bg-transparent border border-[rgba(123,24,40,0.7)] tracking-[0.08em] uppercase transition-all duration-300 hover:bg-[rgba(123,24,40,0.15)] hover:border-[rgba(158,34,53,0.9)]"
           >
             <svg
               width="18"
@@ -724,8 +664,8 @@ import heroBarImg from "../assets/hero-bar.jpg";
        FAQ SECTION
        ======================================== -->
   <section
-    class="bg-nocturno-bg"
-    style="padding:6rem 0; border-top:1px solid var(--color-vinotinto-dark);"
+    class="bg-nocturno-bg py-12 md:py-24"
+    style="border-top:1px solid var(--color-vinotinto-dark);"
   >
     <div class="container">
       <div

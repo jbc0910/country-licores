@@ -50,9 +50,8 @@ const testimonials = [
 >
   <!-- Page Hero -->
   <section
-    class="bg-nocturno-bg"
+    class="bg-nocturno-bg pt-40 pb-16 md:pb-24"
     style="
-    padding:10rem 0 6rem;
     position:relative;
     overflow:hidden;
   "
@@ -62,7 +61,8 @@ const testimonials = [
         src={barInteriorImg}
         alt="Ambiente de Country Licores lleno de gente en Barranquilla"
         title="Experiencias en Country Licores"
-        loading="eager"
+        loading="lazy"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
         style="width:100%; height:100%; object-fit:cover; opacity:0.15;"
       />
       <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(10,3,5,1) 30%, rgba(10,3,5,0.6) 100%);"></div>
@@ -93,11 +93,11 @@ const testimonials = [
        STATS BAR
        ======================================== -->
   <section
-    class="bg-nocturno-bg"
-    style="padding:3rem 0; border-top:1px solid var(--color-vinotinto-dark); border-bottom:1px solid var(--color-vinotinto-dark);"
+    class="bg-nocturno-bg py-8 md:py-12"
+    style="border-top:1px solid var(--color-vinotinto-dark); border-bottom:1px solid var(--color-vinotinto-dark);"
   >
     <div class="container">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
         {
           [
             { value: "+3.9K", label: "Noches documentadas" },
@@ -125,7 +125,7 @@ const testimonials = [
   <!-- ========================================
        TESTIMONIALS GRID
        ======================================== -->
-  <section class="bg-nocturno-bg" style="padding:6rem 0;">
+  <section class="bg-nocturno-bg py-12 md:py-24">
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:4rem;">
         <p class="section-eyebrow" style="justify-content:center;">
@@ -187,8 +187,8 @@ const testimonials = [
        ANTES / DESPUÉS
        ======================================== -->
   <section
-    class="bg-nocturno-bg"
-    style="padding:6rem 0; border-top:1px solid var(--color-vinotinto-dark);"
+    class="bg-nocturno-bg py-12 md:py-24"
+    style="border-top:1px solid var(--color-vinotinto-dark);"
   >
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:4rem;">
@@ -264,8 +264,8 @@ const testimonials = [
        CTA FINAL
        ======================================== -->
   <section
-    class="bg-nocturno-bg"
-    style="padding:7rem 0; text-align:center; position:relative; overflow:hidden; border-top:1px solid var(--color-vinotinto-dark);"
+    class="bg-nocturno-bg py-16 md:py-28"
+    style="text-align:center; position:relative; overflow:hidden; border-top:1px solid var(--color-vinotinto-dark);"
   >
     <div style="position:absolute; inset:0; background:radial-gradient(ellipse at center, rgba(92,14,26,0.12) 0%, transparent 65%); pointer-events:none;"></div>
     <div class="container" style="position:relative;">

@@ -9,8 +9,8 @@ import Layout from '../layouts/Layout.astro';
 >
   <!-- Page Hero -->
   <section
-    class="bg-nocturno-bg"
-    style="padding:10rem 0 5rem; position:relative; overflow:hidden;"
+    class="bg-nocturno-bg pt-40 pb-12 md:pb-20"
+    style="position:relative; overflow:hidden;"
   >
     <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 60% 50%, rgba(92,14,26,0.12) 0%, transparent 60%); pointer-events:none;"></div>
     <div class="container" style="position:relative; text-align:center;">
@@ -29,8 +29,8 @@ import Layout from '../layouts/Layout.astro';
        FORMULARIO + INFO
        ======================================== -->
   <section
-    class="bg-nocturno-bg"
-    style="padding:5rem 0 7rem; border-top:1px solid var(--color-vinotinto-dark);"
+    class="bg-nocturno-bg pt-12 pb-16 md:pt-20 md:pb-28"
+    style="border-top:1px solid var(--color-vinotinto-dark);"
   >
     <div class="container">
       <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-20 items-start">
@@ -44,9 +44,7 @@ import Layout from '../layouts/Layout.astro';
 
           <!-- WhatsApp -->
           <a href="/contacto" title="WhatsApp Country Licores" target="_blank" rel="noopener"
-            style="display:flex; align-items:center; gap:1.25rem; padding:1.5rem; border:1px solid rgba(123,24,40,0.25); margin-bottom:1rem; transition:border-color 0.3s ease, background 0.3s ease;"
-            onmouseover="this.style.borderColor='rgba(158,34,53,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
-            onmouseout="this.style.borderColor='rgba(123,24,40,0.25)'; this.style.background='transparent'"
+            class="flex items-center gap-5 p-6 border border-[rgba(123,24,40,0.25)] hover:border-[rgba(158,34,53,0.4)] hover:bg-[rgba(123,24,40,0.06)] transition-all duration-300 mb-4"
           >
             <div style="width:48px; height:48px; background:rgba(37,211,102,0.1); border:1px solid rgba(37,211,102,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366">
@@ -62,9 +60,7 @@ import Layout from '../layouts/Layout.astro';
 
           <!-- Teléfono -->
           <a href="tel:+573243037861" title="Llamar a Country Licores"
-            style="display:flex; align-items:center; gap:1.25rem; padding:1.5rem; border:1px solid rgba(123,24,40,0.25); margin-bottom:1rem; transition:border-color 0.3s ease, background 0.3s ease;"
-            onmouseover="this.style.borderColor='rgba(158,34,53,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
-            onmouseout="this.style.borderColor='rgba(123,24,40,0.25)'; this.style.background='transparent'"
+            class="flex items-center gap-5 p-6 border border-[rgba(123,24,40,0.25)] hover:border-[rgba(158,34,53,0.4)] hover:bg-[rgba(123,24,40,0.06)] transition-all duration-300 mb-4"
           >
             <div style="width:48px; height:48px; background:rgba(123,24,40,0.1); border:1px solid rgba(123,24,40,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9E2235" stroke-width="1.5">
@@ -79,9 +75,7 @@ import Layout from '../layouts/Layout.astro';
 
           <!-- Instagram -->
           <a href="https://www.instagram.com/countrylicores" title="Country Licores en Instagram" target="_blank" rel="noopener"
-            style="display:flex; align-items:center; gap:1.25rem; padding:1.5rem; border:1px solid rgba(123,24,40,0.25); margin-bottom:2rem; transition:border-color 0.3s ease, background 0.3s ease;"
-            onmouseover="this.style.borderColor='rgba(158,34,53,0.4)'; this.style.background='rgba(123,24,40,0.06)'"
-            onmouseout="this.style.borderColor='rgba(123,24,40,0.25)'; this.style.background='transparent'"
+            class="flex items-center gap-5 p-6 border border-[rgba(123,24,40,0.25)] hover:border-[rgba(158,34,53,0.4)] hover:bg-[rgba(123,24,40,0.06)] transition-all duration-300 mb-8"
           >
             <div style="width:48px; height:48px; background:rgba(193,53,132,0.1); border:1px solid rgba(193,53,132,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="#C13584">
@@ -141,7 +135,7 @@ import Layout from '../layouts/Layout.astro';
                 <input
                   type="text" id="nombre" name="nombre"
                   placeholder="Tu nombre" required
-                  style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:0.95rem; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem;"
+                  style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:16px; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem;"
                   onfocus="this.style.borderColor='#7D1424'; this.style.boxShadow='0 0 0 3px rgba(125,20,36,0.18)'"
                   onblur="this.style.borderColor='#404040'; this.style.boxShadow='none'"
                 />
@@ -155,7 +149,7 @@ import Layout from '../layouts/Layout.astro';
                 <input
                   type="tel" id="telefono" name="telefono"
                   placeholder="300 123 4567" required
-                  style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:0.95rem; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem;"
+                  style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:16px; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem;"
                   onfocus="this.style.borderColor='#7D1424'; this.style.boxShadow='0 0 0 3px rgba(125,20,36,0.18)'"
                   onblur="this.style.borderColor='#404040'; this.style.boxShadow='none'"
                 />
@@ -169,7 +163,7 @@ import Layout from '../layouts/Layout.astro';
                   </label>
                   <input
                     type="date" id="fecha" name="fecha" required
-                    style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:0.95rem; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem; color-scheme:dark;"
+                    style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:16px; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem; color-scheme:dark;"
                     onfocus="this.style.borderColor='#7D1424'; this.style.boxShadow='0 0 0 3px rgba(125,20,36,0.18)'"
                     onblur="this.style.borderColor='#404040'; this.style.boxShadow='none'"
                   />
@@ -181,7 +175,7 @@ import Layout from '../layouts/Layout.astro';
                   <input
                     type="number" id="personas" name="personas" min="1" max="100"
                     placeholder="¿Cuántos?" required
-                    style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:0.95rem; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem;"
+                    style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:16px; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem;"
                     onfocus="this.style.borderColor='#7D1424'; this.style.boxShadow='0 0 0 3px rgba(125,20,36,0.18)'"
                     onblur="this.style.borderColor='#404040'; this.style.boxShadow='none'"
                   />
@@ -196,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
                 <textarea
                   id="mensaje" name="mensaje" rows="3"
                   placeholder="¿Es un cumpleaños? ¿Tienes alguna petición especial?"
-                  style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:0.95rem; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem; resize:vertical; min-height:80px;"
+                  style="width:100%; background:#171717; border:1px solid #404040; color:#FFFFFF; padding:0.75rem 1rem; font-size:16px; transition:border-color 0.3s ease, box-shadow 0.3s ease; outline:none; border-radius:0.5rem; resize:vertical; min-height:80px;"
                   onfocus="this.style.borderColor='#7D1424'; this.style.boxShadow='0 0 0 3px rgba(125,20,36,0.18)'"
                   onblur="this.style.borderColor='#404040'; this.style.boxShadow='none'"
                 ></textarea>
