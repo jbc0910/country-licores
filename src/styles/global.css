@@ -186,7 +186,8 @@ a {
   }
 
   .card-dark {
-    @apply bg-nocturno-card rounded-xl p-6 border transition-all duration-300;
+    @apply bg-nocturno-card rounded-xl border transition-all duration-300;
+    padding: 2rem;
     border-color: rgba(58, 8, 16, 0.3); /* border-vinotinto-dark/30 */
   }
   
@@ -216,6 +217,17 @@ a {
   }
   .section-padding-sm {
     padding: 4rem 0;
+  }
+}
+
+/* Header de sección centrado: eyebrow + h2 + subtítulo antes de grids/listas */
+.section-header {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    margin-bottom: 4rem;
   }
 }
 
