@@ -73,9 +73,10 @@ import heroBarImg from "../assets/hero-bar.jpg";
             class="text-neutral-300"
             style="font-size:0.95rem; line-height:1.8; margin-bottom:2rem;"
           >
-            Nuestro cliente ideal es alguien entre 22 y 45 años, de Barranquilla
-            o el Caribe colombiano, que valora un buen trago, una buena canción
-            y una buena compañía. Que prefiere autenticidad sobre ostentación.
+            En Country Licores creemos que las mejores noches nacen de la buena
+            música, un buen trago y la compañía indicada. Aquí cada visita es
+            una invitación a disfrutar de un auténtico ambiente vallenato en
+            Barranquilla.
           </p>
           <div class="grid grid-cols-2 gap-4 sm:gap-6">
             {
@@ -127,7 +128,7 @@ import heroBarImg from "../assets/hero-bar.jpg";
             style="
             position:absolute;
             bottom:-1.5rem;
-            left:-1.5rem;
+            left:-0.5rem;
             background:var(--color-vinotinto-light);
             color:#FFFFFF;
             padding:1.25rem;
@@ -176,22 +177,22 @@ import heroBarImg from "../assets/hero-bar.jpg";
               {
                 year: "El Origen",
                 title: "Un espacio para lo que ya existía",
-                text: "Country Licores nació de una observación simple pero poderoso: en Barranquilla, la gente siempre ha querido un lugar donde el vallenato sea el protagonista, no el fondo. Un espacio donde llegar con amigos, pedir un trago y que la noche fluya sola.",
+                text: "Country Licores nació con una idea clara: crear un lugar donde el vallenato fuera el protagonista y las noches se disfrutaran entre amigos.",
               },
               {
                 year: "El Crecimiento",
                 title: "La Calle 82 se convirtió en punto de encuentro",
-                text: "La sede en la Carrera 43B con 82 se llenó rápido. La palabra se corrió sola. Clientes frecuentes, familias, grupos de amigos — todos encontraron en Country el espacio que buscaban.",
+                text: "La sede de la Carrera 43B con 82 se convirtió rápidamente en el lugar favorito para compartir, celebrar y volver.",
               },
               {
                 year: "La Consolidación",
                 title: "Dos décadas de parranda ininterrumpida",
-                text: "Con más de 20 años en el mercado, Country Licores se consolidó como referente de la rumba vallenata en Barranquilla. Una trayectoria construida noche a noche, trago a trago.",
+                text: "Dos décadas ofreciendo buena música, tragos y un ambiente que convirtió a Country Licores en un referente de Barranquilla.",
               },
               {
                 year: "Hoy",
-                title: "Más de 3.900 noches documentadas en redes",
-                text: "Con más de 3.900 publicaciones en Instagram y una comunidad de más de 7.800 seguidores, Country Licores sigue siendo el referente del entretenimiento nocturno auténtico de Barranquilla.",
+                title: "Una comunidad que sigue creciendo",
+                text: "Más de 3.900 publicaciones y una comunidad de más de 7.800 seguidores respaldan una historia que continúa cada noche.",
               },
             ].map((item, i) => (
               <div class="reveal grid grid-cols-[80px_1fr] sm:grid-cols-[120px_1fr] gap-4 sm:gap-8 py-10 border-b border-[rgba(255,255,255,0.06)] relative">
@@ -201,11 +202,17 @@ import heroBarImg from "../assets/hero-bar.jpg";
                   </span>
                 </div>
                 <div style="padding-left:2rem; border-left:1px solid var(--color-vinotinto-light); position:relative;">
-                  <div class="bg-vinotinto-light" style="position:absolute; left:-5px; top:0; width:9px; height:9px; border-radius:50%;" />
+                  <div
+                    class="bg-vinotinto-light"
+                    style="position:absolute; left:-5px; top:0; width:9px; height:9px; border-radius:50%;"
+                  />
                   <h3 style="font-size:1.05rem; font-weight:700; color:#FFFFFF; margin-bottom:0.75rem;">
                     {item.title}
                   </h3>
-                  <p class="text-neutral-300" style="font-size:0.9rem; line-height:1.8;">
+                  <p
+                    class="text-neutral-300"
+                    style="font-size:0.9rem; line-height:1.8;"
+                  >
                     {item.text}
                   </p>
                 </div>
@@ -258,14 +265,15 @@ import heroBarImg from "../assets/hero-bar.jpg";
               desc: "Desde las 4 p.m. hasta las 3:30 a.m. La noche dura lo que tiene que durar.",
             },
           ].map((d) => (
-            <div
-              class="reveal-scale p-8 border border-[rgba(58,8,16,0.3)] hover:border-vinotinto-light bg-nocturno-card transition-colors duration-300"
-            >
+            <div class="reveal-scale p-8 border border-[rgba(58,8,16,0.3)] hover:border-vinotinto-light bg-nocturno-card transition-colors duration-300">
               <div style="width:32px; height:2px; background:var(--color-vinotinto-light); margin-bottom:1.25rem;" />
               <h3 style="font-size:1rem; font-weight:700; color:#FFFFFF; margin-bottom:0.65rem;">
                 {d.title}
               </h3>
-              <p class="text-neutral-300" style="font-size:0.88rem; line-height:1.75;">
+              <p
+                class="text-neutral-300"
+                style="font-size:0.88rem; line-height:1.75;"
+              >
                 {d.desc}
               </p>
             </div>
