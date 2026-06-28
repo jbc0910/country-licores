@@ -257,7 +257,7 @@ const {
     </div>
 
     <!-- Main Content -->
-    <main><slot /></main>
+    <main style="padding-top: var(--navbar-height)"><slot /></main>
 
     <!-- Footer -->
     <footer
@@ -416,12 +416,27 @@ const {
 
     <!-- Lightweight Scripts: no heavy libraries on critical path -->
     <script>
-      // Navbar scroll
+      // Navbar scroll and height compensation
       const navbar = document.getElementById("navbar");
+      
+      function updateNavbarHeight() {
+        if (navbar) {
+          const height = navbar.getBoundingClientRect().height;
+          document.documentElement.style.setProperty('--navbar-height', height + 'px');
+        }
+      }
+
+      // Initial execution
+      updateNavbarHeight();
+
+      // Recalculate on load (in case fonts/images adjust sizes)
+      window.addEventListener('load', updateNavbarHeight);
+
       window.addEventListener(
         "scroll",
         () => {
           navbar?.classList.toggle("scrolled", window.scrollY > 50);
+          updateNavbarHeight();
         },
         { passive: true },
       );
@@ -435,11 +450,12 @@ const {
       });
 
       window.addEventListener('resize', () => {
+        updateNavbarHeight();
         if (window.innerWidth >= 768) {
           mobileMenu?.classList.remove('open');
           menuToggle?.setAttribute('aria-expanded', 'false');
         }
-      });
+      }, { passive: true });
 
       // Globals
       (window as any).closeMobileMenu = () => mobileMenu?.classList.remove('open');

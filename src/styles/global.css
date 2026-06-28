@@ -26,6 +26,10 @@
   --font-accent: "Bebas Neue", Impact, sans-serif;
 }
 
+:root {
+  --navbar-height: 74px; /* valor inicial móvil, se actualiza dinámicamente */
+}
+
 /* =============================================
    FONT FACE — garantiza texto visible inmediato
    font-display: swap evita invisible text en iOS
