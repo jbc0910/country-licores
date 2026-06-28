@@ -124,15 +124,23 @@ const {
           preloader.classList.add("loaded");
         }
 
-        // Safety timeout: dismiss preloader after 2 seconds max
-        const timeoutId = setTimeout(hidePreloader, 2000);
+        // Safety timeout: dismiss preloader after 1 second max
+        const timeoutId = setTimeout(hidePreloader, 1000);
 
-        // Hide preloader when window has fully loaded
-        window.addEventListener("load", () => {
+        function checkAndHide() {
           clearTimeout(timeoutId);
           // Small delay for smooth transition feel
-          setTimeout(hidePreloader, 400);
-        });
+          setTimeout(hidePreloader, 200);
+        }
+
+        if (document.readyState === "interactive" || document.readyState === "complete") {
+          checkAndHide();
+        } else {
+          document.addEventListener("DOMContentLoaded", checkAndHide);
+        }
+
+        // Fallback additional listener
+        window.addEventListener("load", checkAndHide);
       })();
     </script>
 
