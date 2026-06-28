@@ -48,23 +48,13 @@ const {
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/logos/favicon.svg" />
 
-    <!-- Google Fonts: preconnect + non-blocking load -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Non-blocking font load (media trick ensures no render-blocking) -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap"
-      media="print"
-      onload="this.media='all'"
     />
-    <!-- Fallback for no-JS (noscript) -->
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap"
-      />
-    </noscript>
 
     <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
@@ -92,18 +82,6 @@ const {
         "sameAs": ["https://www.instagram.com/countrylicores"]
       }
     </script>
-    <!-- Fade-in inmediato del body sin preloader -->
-    <style>
-      body {
-        opacity: 0;
-        animation: body-fadein 0.35s ease forwards;
-      }
-      @keyframes body-fadein {
-        to {
-          opacity: 1;
-        }
-      }
-    </style>
   </head>
   <body class="bg-nocturno-bg text-neutral-300">
     <!-- Navbar -->
